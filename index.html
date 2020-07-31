@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nómada</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="icon x-icon" href="img/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db8316f489.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <script type="module" src="main.js"></script>
+
+    <header class="header hide">
+        <img src="img/logo.png" alt="logo" class="logo">
+    </header>
+
+    <main>
+
+        <section id="login">
+            <img src="img/logo.png" alt="logo" class="logo-inicio">
+            <h3> Conóce, descubre, comparte </h3>
+
+            <form id="dataregistro">
+                <input type="email" id="mail" placeholder="Correo electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+            </form>
+
+            <button id="ingreso" type="button">Ingresar</button>
+
+            <h4><i class="fab fa-google"></i> Ingresar con Google</h4>
+            <h4>Registrate</h4>
+        </section>
+
+        <!-- opcion 2,no lo entendi muy bien
+        <section id="loggin" class="hide">
+            <form>
+                ****preguntar si lo id serian los tags de la data??? no estoy segura 
+                <input type="user" placeholder="usuario" name="user" id=" user">
+                <input type="password" placeholder="password" name="password" id="password">
+                <input type="button" id="enter" name="enter" id="enter" value="Log in">
+            </form>
+            ***** buscar como iniciar con googlee
+            <p>Inicia con google</p>
+            <p>Registrate</p>
+        </section>-->
+    </main>
+
+    <footer>
+        <p>©2020 HexaKey Group</p>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+    <script type="module" src="main.js"></script>
 </body>
+
 </html>
