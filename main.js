@@ -1,54 +1,63 @@
-// Este es el punto de entrada de tu aplicacion
+import {
+    authGoogle,
+    createUser,
+    signIn,
+} from './lib/firebase-auth.js'
 
-import { myFunction } from './lib/index.js';
 
-myFunction();
+//declarando variables
+const signInWithGoogle = document.getElementById('signInGoogle');
 
-// Your web app's Firebase configuration
-var firebaseConfig = {
-    apiKey: "AIzaSyB2NOy-yPmvToNnFt40cJ5rhDkurd4NCsg",
-    authDomain: "laboratoria-social-netwo-6f988.firebaseapp.com",
-    databaseURL: "https://laboratoria-social-netwo-6f988.firebaseio.com",
-    projectId: "laboratoria-social-netwo-6f988",
-    storageBucket: "laboratoria-social-netwo-6f988.appspot.com",
-    messagingSenderId: "372381618571",
-    appId: "1:372381618571:web:8a248b1ace03e0403c5f8e",
-    measurementId: "G-ZJK8FW1LCY"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
-
-document.getElementById('signInGoogle').addEventListener('click', () => {
+// iniciar sesion con google
+signInWithGoogle.addEventListener('click', () => {
     authGoogle();
 });
 
-function authGoogle() {
-    var provider = new firebase.auth.GoogleAuthProvider();
-    autenthication(provider);
-};
 
-function autenthication(provider) {
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = result.credential.accessToken;
-        console.log(token);
-        // The signed-in user info.
-        var user = result.user;
-        console.log(user);
-        // ...
-    }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        console.log(errorCode);
-        var errorMessage = error.message;
-        console.log(errorMessage);
-        // The email of the user's account used.
-        var email = error.email;
-        console.log(email);
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        console.log(credential);
-        // ...
-    });
-}
+// ingresar
+document.getElementById('ingreso').addEventListener('click', () => {
+    const email = document.getElementById('mail').value;
+    const password = document.getElementById('password').value;
+
+    /*    document.getElementById('body').classList.remove('body');
+       document.getElementById('body').classList.add('body2');
+        document.getElementById('header').classList.add('head');
+        document.getElementById('wall').classList.remove('hide');
+        document.getElementById('login').classList.add('hide');
+        document.getElementById('barra-inferior').classList.remove('hide'); */
+    console.log(email, password);
+    signIn(email, password);
+});
+
+// Mostrar modal
+const modal = document.getElementById('myModal');
+const btnOpenModal = document.getElementById('btn-open-modal-register');
+const btncloseModal = document.getElementsByClassName('close-modal')[0];
+
+// Cuando el usuario haga clic en el botón, abra la modal
+btnOpenModal.addEventListener('click', () => {
+    modal.style.display = "block";
+});
+// Cuando el usuario hace clic en <span> (x), cierre el modal
+btncloseModal.addEventListener('click', () => {
+    modal.style.display = "none";
+});
+// Cuando el usuario hace clic en cualquier lugar fuera del modal, ciérrelo
+window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+});
+
+const email = document.getElementById('email-register');
+const password = document.getElementById('password-register');
+const btnRegister = document.getElementById('btn-register');
+btnRegister.addEventListener('click', () => {
+    const valueEmail = email.value;
+    console.log(valueEmail);
+    const valuePassword = password.value;
+    console.log(valuePassword);
+    createUser(valueEmail, valuePassword);
+    modal.style.display = "none";
+
+});
