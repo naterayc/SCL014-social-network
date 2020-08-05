@@ -1,4 +1,7 @@
-// Your web app's Firebase configuration
+import { 
+    changeRoute 
+} from '../../view-controller/router.js'
+ // La configuración de Firebase de tu aplicación web
 var firebaseConfig = {
     apiKey: "AIzaSyB2NOy-yPmvToNnFt40cJ5rhDkurd4NCsg",
     authDomain: "laboratoria-social-netwo-6f988.firebaseapp.com",
@@ -10,7 +13,7 @@ var firebaseConfig = {
     measurementId: "G-ZJK8FW1LCY"
 };
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig); 
 
 
 const authGoogle = () => {
@@ -19,22 +22,22 @@ const authGoogle = () => {
         .auth()
         .signInWithPopup(provider)
         .then(function(result) {
-            // This gives you a Google Access Token. You can use it to access the Google API.
+            // Esto te da un token de acceso de Google. Puede usarlo para acceder a la API de Google
             var token = result.credential.accessToken;
-            // The signed-in user info.
+            // La información de usuario registrada.
             var user = result.user;
             console.log('el usuario se logueo con google');
             console.log(user);
         }).catch(function(error) {
-            // Handle Errors here.
+            // Manejar errores aquí.
             var errorCode = error.code;
             console.log(errorCode);
             var errorMessage = error.message;
             console.log(errorMessage);
-            // The email of the user's account used.
+            // El correo electrónico de la cuenta del usuario utilizado.
             var email = error.email;
             console.log(email);
-            // The firebase.auth.AuthCredential type that was used.
+            // El tipo firebase.auth.AuthCredential que se utilizó.
             var credential = error.credential;
             console.log(credential);
             // ...
@@ -53,9 +56,13 @@ const createUser = (email, password) => {
                 data.user.sendEmailVerification();
                 firebase.auth().signOut();
             }
+            document.getElementById('activa-registro').classList.remove('hide');
+            setTimeout(function(){ document.getElementById('myModal').style.display = "none" }, 3000);                       
         })
         .catch(function(error) {
-            // Handle Errors here.
+            // Manejar errores aquí.
+            document.getElementById('msgRegister-error').classList.remove('hide');
+            document.getElementById('myModal').style.display = "block";
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error);
@@ -68,11 +75,17 @@ const signIn = (email, password) => {
         .auth()
         .signInWithEmailAndPassword(email, password)
         .then(function(data) {
+            if (data.user.emailVerified !== false){
+                changeRoute('#/wall');
+            } else {
+               alert('Debes verificar tu correo antes de ingresar');
             console.log(data.user);
             console.log('el usuario se logueo');
+            }
         })
         .catch(function(error) {
-            // Handle Errors here.
+            // Manejar errores aquí.
+            document.getElementById('msg-error').classList.remove('hide');
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error);
@@ -89,6 +102,7 @@ const signOut = () => {
         .then(function() {
             // Sign-out successful.
         }).catch(function(error) {
+
             // An error happened.
         });
 }

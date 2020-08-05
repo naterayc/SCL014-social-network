@@ -13,86 +13,12 @@
 </head>
 
 <body id="body" class="body">
-
-    <header id="header" class="hide">
-        <img src="img/logo.png" alt="logo" class="logo">
-        <i class="fas fa-search lupa"></i>
-    </header>
-
-    <main>
-        <!-- Página de login -->
-        <section id="login">
-            <img src="img/logo.png" alt="logo" class="logo-inicio">
-            <h5> Conoce Descubre Comparte </h5>
-
-            <form id="dataregistro">
-                <input type="email" id="mail" placeholder="Correo electrónico" autocomplete="email" required>
-                <input type="password" id="password" placeholder="Contraseña" autocomplete="current-password" required>
-            </form>
-
-            <button id="ingreso" class="buttonWhite" type="button">Ingresar</button>
-
-            <h4 id="signInGoogle"><i class="fab fa-google"></i> Ingresar con Google</h4>
-            <h4 id="btn-open-modal-register">Registrar usuario</h4>
-            <p class="copyright">©2020 HexaKey Group</p>
-        </section>
-
-        <!-- Modal de registro -->
-        <section id="myModal" class="modal">
-            <span class="close-modal">&times;</span>
-            <section class="modal-content">
-                <section>
-                    <img src="img/islandia.jpg" id="picture-perfil-register" alt="Foto perfil" class="imgRedonda">
-                </section>
-                <section>
-                    <form>
-                        <h2>Datos Personales:</h2>
-                        <fieldset>
-                            <input type="text" id="user-register" placeholder="Usuario:" autocomplete="Usuario" required><br><br>
-                            <input type="text" id="fname-register" placeholder="Nombres:" autocomplete="Nombres" required><br><br>
-                            <input type="text" id="lname-register" placeholder="Apellidos:" autocomplete="Apellidos:" required><br><br>
-                            <input type="date" id="birthday-register" placeholder="Fecha de nacimiento:" autocomplete="Fecha de nacimiento:" required><br><br>
-                            <input type="text" id="country-register" placeholder="Pais:" autocomplete="Pais" required><br><br>
-                        </fieldset>
-                    </form>
-
-                    <section>
-                        <form action="/action_page.php">
-                            <h2>Cuenta:</h2>
-                            <fieldset>
-                                <input type="email" id="email-register" placeholder="Correo electrónico" autocomplete="email" required><br><br>
-                                <input type="password" id="password-register" placeholder="Contraseña" autocomplete="current-password" require><br><br>
-                            </fieldset>
-                        </form>
-                    </section>
-                    <button id="btn-register" type="button">Registrar</button>
-                </section>
-            </section>
-        </section>
-
-        <!-- Muro -->
-        <section id="wall" class="hide">
-            <div class="public">
-                <input class="inputpublic" type="textfield" placeholder="¿Que quieres compartir?">
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="barra-inferior" class="hide">
-        <div id="barra">
-            <i class="fas fa-home iconos-barra"></i>
-            <i class="fas fa-star iconos-barra"></i>
-            <i class="fas fa-user iconos-barra"></i>
-        </div>
-
-    </footer>
-
+    <div id="containerViews"></div>
+    
     <!-- El SDK básico de Firebase JS siempre se requiere y debe aparecer primero -->
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-
 
     <script type="module" src="main.js"></script>
     <!-- <script type="module" src="lib/firebase.js"></script> -->
