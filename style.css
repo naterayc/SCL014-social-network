@@ -34,7 +34,24 @@ input {
     color: #ffffff;
 }
 
-
+#msg-error {
+    width:70%;
+    margin:auto;
+    padding: .8rem .3rem .3rem .3rem; 
+}
+#msg-error>span{
+    font-family: 'Roboto';
+    color: #ffffff;
+}
+#msgRegister-error {
+    width: 70%;
+    margin:auto;
+    padding: .8rem 0 .3rem 0;
+}
+#msgRegister-error>span {
+    font-family: 'Roboto';
+    align-items: center;
+}
 /*
 input::first-line {
     margin-top: 2rem;
@@ -82,7 +99,10 @@ h5 {
     margin: 2rem auto auto auto;
     font-weight: 500;
 }
-
+a {
+    text-decoration: none;
+    color: #2979FF;
+}
 
 /*::placeholder {
     color: #ffff;
