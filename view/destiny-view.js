@@ -1,3 +1,7 @@
+import { footer } from "./footer-view.js";
+
+
+
 const destinyContent = `
 <div id="header" class="head">
     <img src="img/logo.png" alt="logo" class="logo">
@@ -12,13 +16,7 @@ const destinyContent = `
     </section>
 
 </section>
-
-<footer id="barra-inferior">
-    <div id="barra">
-        <i class="fas fa-home iconos-barra"></i>
-        <i class="fas fa-star iconos-barra"></i>
-        <i class="fas fa-user iconos-barra"></i>
-    </div>
-</footer>`;
+${footer}
+`;
 
 export { destinyContent }
