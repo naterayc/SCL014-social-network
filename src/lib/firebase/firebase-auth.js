@@ -1,6 +1,7 @@
 import { 
-    changeRoute 
+    pushState,
 } from '../../view-controller/router.js'
+
  // La configuración de Firebase de tu aplicación web
 var firebaseConfig = {
     apiKey: "AIzaSyB2NOy-yPmvToNnFt40cJ5rhDkurd4NCsg",
@@ -76,7 +77,7 @@ const signIn = (email, password) => {
         .signInWithEmailAndPassword(email, password)
         .then(function(data) {
             if (data.user.emailVerified !== false){
-                changeRoute('#/wall');
+                pushState('#/wall');
             } else {
                alert('Debes verificar tu correo antes de ingresar');
             console.log(data.user);
