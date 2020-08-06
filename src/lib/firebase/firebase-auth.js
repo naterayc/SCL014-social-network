@@ -61,8 +61,8 @@ const createUser = (email, password) => {
         })
         .catch(function(error) {
             // Manejar errores aquí.
-            document.getElementById('msgRegister-error').classList.remove('hide');
-            document.getElementById('myModal').style.display = "block";
+            divSignIn.getElementById('msgRegister-error').classList.remove('hide');
+            divSignIn.getElementById('myModal').style.display = "block";
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error);
@@ -85,7 +85,7 @@ const signIn = (email, password) => {
         })
         .catch(function(error) {
             // Manejar errores aquí.
-            document.getElementById('msg-error').classList.remove('hide');
+            
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error);

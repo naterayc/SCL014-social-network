@@ -92,8 +92,6 @@ export const signInView = () => {
             console.log(email, password);
             signIn(email, password);
             
-
-
         });
 
         // Mostrar modal
@@ -129,7 +127,7 @@ export const signInView = () => {
             const valuePassword = password.value;
             console.log(valuePassword);
             createUser(valueEmail, valuePassword);
-            divSignIn.getElementById('containerViews').innerHTML(wallView());
+            /*divSignIn.getElementById('containerViews').innerHTML(wallView());*/
         });
     }, 1000);
     divSignIn.innerHTML = viewSignIn; return divSignIn;
