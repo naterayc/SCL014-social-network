@@ -11,11 +11,7 @@ export const destinyView = () => {
 
     const btnPost = document.querySelector('#post');
     btnPost.addEventListener('click', () => {
-        console.log(window.location.hash);
         changeRoute('#/wall');
-        console.log('se cambio ruta');
     });
-
-    return destinyWall;
 
 }

@@ -10,12 +10,10 @@ export const wallView = () => {
     document.getElementById('containerViews').appendChild(wall);
 
     const btnPost = wall.querySelector('#post');
-    console.log(btnPost);
     btnPost.addEventListener('click', () => {
         changeRoute('#/destiny');
     });
 
-    return wall;
 }
 
 

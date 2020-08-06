@@ -1,3 +1,4 @@
+import { footer } from "./footer-view.js";
 
 const wallContent = `
 <div id="header" class="head">
@@ -12,13 +13,7 @@ const wallContent = `
     </div>
     <button id="post" type="button"><a href="#/destiny">Ver publicaciones</a></button>
 </section>
-
-<footer id="barra-inferior">
-    <div id="barra">
-        <i class="fas fa-home iconos-barra"></i>
-        <i class="fas fa-star iconos-barra"></i>
-        <i class="fas fa-user iconos-barra"></i>
-    </div>
-</footer>`;
+${footer}
+`;
 
 export { wallContent };
