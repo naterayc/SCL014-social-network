@@ -1,3 +1,6 @@
+import { 
+    changeRoute 
+} from '../view-controller/router.js'
 export const wallView = () => {
 // creando elementos de html dinamico
 const wall = document.createElement('div');  //contendra toda la vista
@@ -12,7 +15,7 @@ const wallContent = `
     <div class="public">
         <input class="inputpublic" type="textfield" placeholder="¿Que quieres compartir?">
     </div>
-    <button id="post" type="button">Ver publicaciones</button>
+    <button id="post" type="button"><a href="#/destiny">Ver publicaciones</a></button>
 </section>
 
 <footer id="barra-inferior">
@@ -23,34 +26,18 @@ const wallContent = `
     </div>
 </footer>`;
 
-wallView.querySelector('#post')
+setTimeout(function () {
+const btnPost = wall.querySelector('#post');
+console.log(btnPost);
+btnPost.addEventListener('click', () => {
+    changeRoute('#/destiny');        
+});
+}, 1000); 
 wall.innerHTML = wallContent;
 return wall;
 
 }
 
-
-/* <header id="header" class="hide">
-    <img src="img/logo.png" alt="logo" class="logo">
-    <i class="fas fa-search lupa"></i>
-</header>
-
-<!-- Muro -->
-        <section id="wall" class="hide">
-            <div class="public">
-                <input class="inputpublic" type="textfield" placeholder="¿Que quieres compartir?">
-            </div>
-        </section>
-
-        <footer id="barra-inferior" class="hide">
-        <div id="barra">
-            <i class="fas fa-home iconos-barra"></i>
-            <i class="fas fa-star iconos-barra"></i>
-            <i class="fas fa-user iconos-barra"></i>
-        </div>
-
-    </footer>
-        */
 
        
 

@@ -12,7 +12,7 @@ const init = () => {
     let firstView = document.getElementById('containerViews');
     firstView.appendChild(signInView());
     window.addEventListener('hashchange', () =>{
-    console.log("hola mundo2");
+    
     changeRoute(window.location.hash);
     console.log(window.location.hash);
     });
