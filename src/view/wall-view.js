@@ -1,19 +1,25 @@
 import { footer } from "./footer-view.js";
+import { header } from "./header-view.js"
+import { postPlantilla } from "./post-content-view.js"
 
 const wallContent = `
-<div id="header" class="head">
-    <img src="img/logo.png" alt="logo" class="logo">
-    <i class="fas fa-search lupa"></i>
-</div>
-
-<!-- Muro -->
+${ header }
 <section id="wall">
     <div class="public">
-        <input class="inputpublic" type="textfield" placeholder="¿Que quieres compartir?">
+        <img src="img/islandia.jpg" class="profile-picture">
+        <input class="inputpublic" type="text" placeholder="¿Que quieres compartir?">
     </div>
-    <button id="post" type="button"><a href="#/destiny">Ver publicaciones</a></button>
+    <div id="publish"> Publicar </div>
+    
+    <button id="post" type="button" class="button2">Ver publicaciones</button>
 </section>
-${footer}
+<section id= "container-post">
+${ postPlantilla }
+${ postPlantilla }
+${ postPlantilla }
+</section>
+
+${ footer }
 `;
 
 export { wallContent };

@@ -57,13 +57,13 @@ const createUser = (email, password) => {
                 data.user.sendEmailVerification();
                 firebase.auth().signOut();
             }
-            document.getElementById('activa-registro').classList.remove('hide');
+            document.querySelector('#activa-registro').classList.remove('hide');
             setTimeout(function(){ document.getElementById('myModal').style.display = "none" }, 3000);                       
         })
         .catch(function(error) {
             // Manejar errores aquí.
-            divSignIn.getElementById('msgRegister-error').classList.remove('hide');
-            divSignIn.getElementById('myModal').style.display = "block";
+            document.querySelector('#msgRegister-error').classList.remove('hide');
+            document.querySelector('#myModal').style.display = "block";
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error);
@@ -86,7 +86,7 @@ const signIn = (email, password) => {
         })
         .catch(function(error) {
             // Manejar errores aquí.
-            
+            document.querySelector('#msg-error').classList.remove('hide');
             var errorCode = error.code;
             var errorMessage = error.message;
             console.log(error);

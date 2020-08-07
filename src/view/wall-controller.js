@@ -4,6 +4,8 @@ import {
 import { wallContent } from './wall-view.js';
 export const wallView = () => {
 
+    document.getElementById('body').style.background = 'transparent';
+
     const wall = document.createElement('div');
     wall.setAttribute('id', 'contenedor');
     wall.innerHTML = wallContent;
@@ -14,6 +16,17 @@ export const wallView = () => {
         changeRoute('#/destiny');
     });
 
+    const menu = document.getElementById('show-signout');
+    const signOutBar = document.getElementById('sign-out');
+    menu.addEventListener('click', () => {
+        signOutBar.style.display = 'block';
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == signOutBar){
+        signOutBar.style.display = 'none';
+        }
+    });
 }
 
 

@@ -136,9 +136,9 @@ a {
 /* Muro */
 
 .head {
-    background-color: #C5E0EF;
+    background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
     height: auto;
     box-sizing: border-box;
@@ -147,8 +147,40 @@ a {
 }
 
 .lupa {
-    color: #ffffff;
+    margin-right: 2rem;
+    color: #4F4F4F;
     font-size: 1.4rem;
+}
+.bar{
+    margin-right: 0;
+    color: #4F4F4F;
+    font-size: 1.4rem;
+}
+
+.signout {
+    align-items: center;
+    width:35%;
+    margin-left:auto;
+    padding: .8rem;
+}
+.signout>span {
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin:auto 0 auto .5rem;
+    color:#4F4F4F;
+}
+.signout>i {
+    font-size: 1rem;
+    color:#4F4F4F; 
+}
+
+.profile-picture {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    text-align: center;
 }
 
 .public {
@@ -156,15 +188,16 @@ a {
     border: solid 1px #004ECB;
     border-radius: 10px;
     width: 80%;
-    padding: 1rem;
-    margin: 1rem auto 1rem auto;
+    padding: .5rem;
+    margin: 1rem auto .2rem auto;
     align-items: center;
+    justify-content: center;
 }
 
 .inputpublic {
     border: #ffffff;
-    width: 60%;
-    margin: 0 0 auto 25%;
+    width: 70%;
+    margin: auto 0 auto 5%;
     text-align: center;
     padding: .5rem;
     color: #4F4F4F;
@@ -174,10 +207,30 @@ a {
     color: #004ECB;
 }
 
+#publish {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #004ECB;
+    margin: 1% 0 5% 75%;
+}
+
+.button2 {
+    width: 90%;
+    height: 3rem;
+    background: #2979FF;
+    border-radius: 10px;
+    border: transparent;
+    color: #ffff;
+    font-size: 1rem;
+    display: block;
+    margin: 1.5rem auto auto auto;
+    font-weight: 500;
+}
 
 /*logo de las secciones de la app */
 
 .logo {
+    margin-right: 40%;
     width: 35%;
     height: auto;
 }
@@ -187,8 +240,9 @@ a {
 
 #barra-inferior {
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
+    clear:both;
 }
 
 #barra {
@@ -307,4 +361,68 @@ button {
     display: block;
     margin: 2rem auto auto auto;
     font-weight: 500;
+}
+#container-post{
+    /*position: fixed;*/ 
+    margin-top: 1%;    
+    width: 100%; 
+    overflow-y: scroll; 
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+#container-post::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;   
+    display: none; 
+}
+
+#post-note{
+    width: auto;
+    height: auto;
+    /*overflow: hidden;*/
+    background: #C5E0EF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#post-note div {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    padding: .2rem; 
+}
+
+#post-note div>i{
+    margin:0 5% 0 0 ;
+}
+#post-note>h4{
+    font-family: 'Roboto';
+    font-size: 0.8rem;
+    color: black;
+    text-align:left ;
+    font-weight: 200;
+    line-height: 0rem;
+    margin-left: 0.8rem;
+}
+.img-cuadrada{
+    margin:auto;
+    width: 98%;
+    height: auto;
+    
+}
+
+/* @supports(object-fit: cover){
+    #post-note .img-cuadrada{
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+} */
+#picture-perfil-post{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: solid #ffff 2px;
+    margin: auto auto auto 5%;
+    z-index: 1;
+    position: fixed;
 }
