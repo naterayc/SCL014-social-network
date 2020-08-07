@@ -1,4 +1,4 @@
-const postPlantilla = `
+const mypostPlantilla = `
 <div id="post-note">
         <div>
             <i class="fas fa-ellipsis-h icon"></i>

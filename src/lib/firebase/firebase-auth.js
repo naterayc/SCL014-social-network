@@ -29,6 +29,7 @@ const authGoogle = () => {
             var user = result.user;
             console.log('el usuario se logueo con google');
             console.log(user);
+            pushState('#/wall');
         }).catch(function(error) {
             // Manejar errores aquí.
             var errorCode = error.code;
@@ -101,7 +102,9 @@ const signOut = () => {
         .auth()
         .signOut()
         .then(function() {
-            // Sign-out successful.
+            pushState('#/');
+            console.log('Sign-out successful');
+            console.log(user);
         }).catch(function(error) {
 
             // An error happened.

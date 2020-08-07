@@ -20,7 +20,6 @@ export const signInView = () => {
 
     // declarando variables
     const signInWithGoogle = divSignIn.querySelector('#signInGoogle');
-    console.log(signInWithGoogle);
     // iniciar sesion con google
     signInWithGoogle.addEventListener('click', () => {
         authGoogle();

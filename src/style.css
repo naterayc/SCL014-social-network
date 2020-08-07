@@ -147,6 +147,7 @@ a {
 }
 
 .lupa {
+    margin-left: 1rem;
     margin-right: 2rem;
     color: #4F4F4F;
     font-size: 1.4rem;
@@ -242,15 +243,21 @@ a {
     width: 100%;
     position: fixed;
     bottom: 0;
-    clear:both;
+    clear: both;
+    box-sizing: border-box;
 }
 
 #barra {
     display: flex;
     width: 100%;
     background-color: #EDEDED;
-    padding: .5rem 0 .5rem 0;
+    padding: .5rem ;
     justify-content: space-around;
+    box-sizing: border-box;
+}
+
+#barra>span{
+    margin:0;
 }
 
 .iconos-barra {
@@ -357,11 +364,13 @@ button {
     border-radius: 10px;
     border: transparent;
     color: #ffff;
-    font-size: 1rem;
+    font-family: 'roboto';
+    font-size: 1.2rem;
     display: block;
     margin: 2rem auto auto auto;
     font-weight: 500;
 }
+
 #container-post{
     /*position: fixed;*/ 
     margin-top: 1%;    
@@ -383,46 +392,153 @@ button {
     /*overflow: hidden;*/
     background: #C5E0EF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 0.5rem;
 }
 #post-note div {
     display: flex;
     justify-content: flex-end;
     margin: auto;
-    padding: .2rem; 
+    padding: .3rem .1rem .1rem .1rem; 
 }
 
 #post-note div>i{
     margin:0 5% 0 0 ;
 }
-#post-note>h4{
+
+#post-note div>h4{
     font-family: 'Roboto';
-    font-size: 0.8rem;
-    color: black;
+    margin: 1.3rem auto .2rem auto;
+    font-size: .9rem;
+    color: #4F4F4F;
     text-align:left ;
     font-weight: 200;
-    line-height: 0rem;
-    margin-left: 0.8rem;
+    line-height: 0;    
 }
+
+#post-note div>p{
+    font-family: 'roboto';
+    font-size: .8rem;
+    text-align: right;
+    margin: 2rem 0 0 0;
+    color: #4F4F4F;
+}
+
 .img-cuadrada{
     margin:auto;
-    width: 98%;
+    width: 95%;
     height: auto;
     
 }
 
-/* @supports(object-fit: cover){
-    #post-note .img-cuadrada{
-      width: 100%;
-      object-fit: cover;
-      object-position: center center;
-    }
-} */
+.like-comment{
+    font-family: 'roboto';
+    font-size: 1rem;
+    color: #4F4F4F;
+    margin-right: .1rem
+}
 #picture-perfil-post{
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: solid #ffff 2px;
-    margin: auto auto auto 5%;
-    z-index: 1;
-    position: fixed;
+    margin: .2rem auto .2rem 5%;
+    display: flex;
+}
+
+/*destinos destacados */
+#contenedor {
+    margin-bottom: 11%;
+}
+
+#destiny-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#destacado {
+    color: #4F4F4F;
+    font-size: 1.2rem;
+    font-family: 'roboto';
+    margin-left: .2rem;
+}
+.icon {
+    font-size: 1.2rem;
+    color:#4F4F4F;
+}
+
+.text {
+    font-family: 'roboto';
+    font-size: .9rem;
+    color: #4F4F4F;
+    text-align: center;
+    margin:1rem;
+}
+#destinos {
+    display:flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding:.5rem;
+}
+
+#box {
+    width: 45%;
+    height: auto;
+    box-sizing: border-box;
+    margin:auto auto .7rem auto;
+    text-align: center;
+}
+
+#destiny-name {
+    font-family: 'Roboto';
+    font-size: 1rem;
+    text-align: center;
+    color: #4F4F4F;
+}
+
+#destiny-img {
+    justify-self: center;
+    width: 90%;
+    height:8rem;
+    margin:auto auto auto .5rem;
+}
+
+/*Perfil */
+
+.iconos-profile {
+    font-size: 2rem;
+    color: #4F4F4F
+    
+}
+.img-profile {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    margin-right: 40%;
+    margin: 1rem;
+    display: block;
+    text-align: center;
+    justify: left;
+}
+
+#container-mypost{
+    position: fixed; 
+    margin-top: 1%;    
+    width: 50%; 
+    overflow-y: scroll;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
+
+#container-mypost::-webkit-scrollbar {
+    width: 8px;     
+    height: 8px;   
+    display: none; 
+}
+#boxmypost {
+    height: auto;
+    box-sizing: border-box;
+    margin:auto;
+    text-align: center;
 }
