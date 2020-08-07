@@ -1,6 +1,6 @@
-import { signInView } from '../view/sign-in.js';
-import { wallView } from '../view/wall.js'; 
-import { destinyView } from '../view/destiny.js'; 
+import { signInView } from '../view/sign-in-controller.js';
+import { wallView } from '../view/wall-controller.js'; 
+import { destinyView } from '../view/destiny-controller.js'; 
 
 export const changeRoute = (hash) => {
     if (hash === '') {

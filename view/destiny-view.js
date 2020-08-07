@@ -1,12 +1,9 @@
 import { footer } from "./footer-view.js";
-
+import { header } from "./header-view.js";
 
 
 const destinyContent = `
-<div id="header" class="head">
-    <img src="img/logo.png" alt="logo" class="logo">
-    <i class="fas fa-search lupa"></i>
-</div>
+${ header }
 
 <!-- destiny -->
 <section id="wall">
@@ -16,7 +13,7 @@ const destinyContent = `
     </section>
 
 </section>
-${footer}
+${ footer }
 `;
 
 export { destinyContent }
