@@ -1,6 +1,7 @@
 import { signInView } from '../view/sign-in-controller.js';
 import { wallView } from '../view/wall-controller.js'; 
 import { destinyView } from '../view/destiny-controller.js'; 
+import {profileView } from '../view/profile-controller.js';
 
 export const changeRoute = (hash) => {
     if (hash === '') {
@@ -24,6 +25,9 @@ const showViews = (hash) => {
         break;
         case '#/destiny' :
             destinyView();
+        break;
+        case '#/profile':
+            profileView();
         break;
         default: 
             viewsContainer.innerHTML = `<h2> Not Found Error 404</h2>`

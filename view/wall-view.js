@@ -11,7 +11,7 @@ ${ header }
     </div>
     <div id="publish"> Publicar </div>
     
-    <button id="post" type="button" class="button2">Ver publicaciones</button>
+    <button id="post" type="button" class="button2">Destinos destacados</button>
 </section>
 <section id= "container-post">
 ${ postPlantilla }
