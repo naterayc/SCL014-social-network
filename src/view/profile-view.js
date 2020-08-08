@@ -1,5 +1,5 @@
 import { footer } from "./footer-view.js";
-import { postPlantilla } from "./post-content-view.js"
+import { mypostPlantilla } from "./mypost-content-view.js"
 
 const profileContent = `
 <section id="infoviajero">
@@ -19,19 +19,33 @@ const profileContent = `
 </section>
 
 <section id="intereses">
-    <div id="boxinteres">
-            
+    <div id="interes-title">
+       <h2> America </h2> <h2> Comida </h2>
     </div>
 </section>
  
-<!--<section id="freinds">
-    <div id="mostrar-amigos">        
+<section id="freinds">
+    <h4> Mis Amigos </h4>
+    <div id="mostrar-amigos">  
+        <img src="img/costa-rica.jpg" id="picture-myfreinds" alt="Foto perfil">  
     </div>
-</section>-->
+    <div id="mostrar-amigos">  
+        <img src="img/colombia.jpg" id="picture-myfreinds" alt="Foto perfil">  
+    </div>
+    <div id="mostrar-amigos">  
+        <img src="img/brasil.jpg" id="picture-myfreinds" alt="Foto perfil">  
+    </div>
+</section>
 
 <section id= "container-mypost">
     <div id="boxmypost">
-    ${ postPlantilla } ${ postPlantilla }
+    ${ mypostPlantilla } 
+    </div>
+    <div id="boxmypost">
+    ${ mypostPlantilla } 
+    </div>
+    <div id="boxmypost">
+    ${ mypostPlantilla } 
     </div>
 </section>
 ${ footer }
