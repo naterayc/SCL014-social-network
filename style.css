@@ -437,13 +437,15 @@ button {
     margin-right: .1rem
 }
 #picture-perfil-post{
-    width: 2rem;
-    height: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
     border: solid #ffff 2px;
-    margin: .2rem auto .2rem 5%;
+    margin: 0 auto .2rem 5%;
     display: flex;
 }
+
+
 
 /*destinos destacados */
 #contenedor {
@@ -519,14 +521,13 @@ button {
     margin: 1rem;
     display: block;
     text-align: center;
-    /* justify: left; */
 }
 
 #container-mypost{
     position: fixed; 
     margin-top: 1%;    
     width: 50%; 
-    overflow-y: scroll;
+    overflow: auto;
     box-sizing: border-box;
     padding: 1.5rem;
 }
@@ -541,4 +542,25 @@ button {
     box-sizing: border-box;
     margin:auto;
     text-align: center;
+   
+}
+
+.mylike-comment{
+    font-family: 'roboto';
+    font-size: .7rem;
+    color: #4F4F4F;
+    margin-right: .1rem
+}
+#intereses-title {
+    display: auto;
+    justify-content: auto;
+    align-items: auto;
+}
+#picture-myfreinds{
+    width: 4rem;
+    height: 4em;
+    border-radius: 50%;
+    border: solid #ffff 2px;
+    margin: .2rem auto .2rem 5%;
+    display: flex;
 }
