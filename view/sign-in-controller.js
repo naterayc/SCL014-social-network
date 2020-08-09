@@ -10,9 +10,11 @@ import {
 } from '../view-controller/input-validator.js';
 import { viewSignIn } from './sign-in-view.js';
 
+import { registerUser } from '../lib/firebase/firebase-firestore.js';
+
+
 export const signInView = () => {
-
-
+   
     const divSignIn = document.createElement('div');
     divSignIn.setAttribute('id', 'contenedor');
     divSignIn.innerHTML = viewSignIn;
@@ -60,16 +62,27 @@ export const signInView = () => {
     //evento para validar
     const email = document.getElementById('email-register');
     const password = document.getElementById('password-register');
+    const user = document.getElementById('user-register');
+    const firstName = document.getElementById('fname-register');
+    const lastName = document.getElementById('lname-register');
+    const birthday = document.getElementById('birthday-register');
+    const country = document.getElementById('country-register');
+
     email.addEventListener('input', validatorRegister);
     password.addEventListener('input', validatorRegister);
 
     const btnRegister = document.getElementById('btn-register');
     btnRegister.addEventListener('click', () => {
         const valueEmail = email.value;
-        console.log(valueEmail);
-        const valuePassword = password.value;
-        console.log(valuePassword);
+        const valuePassword = password.value;        
         createUser(valueEmail, valuePassword);
+        registerUser({
+            user: user.value,
+            firstName: firstName.value,
+            lastName: lastName.value,
+            birthday: birthday.value,
+            country: country.value,
+        })
     });
 
 }
