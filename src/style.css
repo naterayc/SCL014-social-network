@@ -167,7 +167,7 @@ a {
 .signout>span {
     font-family: 'roboto';
     font-size: 1rem;
-    margin:auto 0 auto .5rem;
+    margin:auto 0 auto 0;
     color:#4F4F4F;
 }
 .signout>i {
@@ -385,7 +385,16 @@ button {
     height: 8px;   
     display: none; 
 }
-
+#post-note div.edit-post{
+    display: none;
+} 
+.edit-post>span{
+    right: 0;
+    font-family: 'roboto';
+    font-size: .9rem;
+    color:#4F4F4F;
+    margin-right: 2%;
+}
 #post-note{
     width: auto;
     height: auto;
@@ -444,7 +453,6 @@ button {
     margin: 0 auto .2rem 5%;
     display: flex;
 }
-
 
 
 /*destinos destacados */
@@ -506,12 +514,24 @@ button {
     margin:auto auto auto .5rem;
 }
 
-/*Perfil */
 
-.iconos-profile {
-    font-size: 2rem;
-    color: #4F4F4F
-    
+/*Perfil */
+#info-viajero {
+    display:flex;
+}
+.user-name {
+    font-family: 'roboto';
+    font-size: 1.5rem;
+    color: #4F4F4F;
+    margin: 2rem auto auto auto;
+    text-align: center;
+}
+.user-info {
+    font-family: 'roboto';
+    font-size: 1rem;
+    color: #4F4F4F;
+    margin: .5rem auto auto auto;
+    text-align: center;
 }
 .img-profile {
     width: 7rem;
@@ -522,27 +542,76 @@ button {
     display: block;
     text-align: center;
 }
+#iconos{
+    margin-left:5%;
+}
+.iconos-profile {
+    margin-left:1%;
+    font-size: 1.4rem;
+    color: #4F4F4F;
+    align-self: auto;
+}
+
+#intereses { 
+    margin-top:auto;    
+    width: auto; 
+    flex-wrap: wrap;
+} 
+
+#boxdeinteres {
+    height: auto;
+    box-sizing: border-box;
+    margin:auto;
+    text-align: center; 
+}
+
+#intereses-title {
+    display: auto;
+    justify-content: auto;
+    align-items: auto;
+}
+
+#freinds{ 
+    margin-top: auto;    
+    width: auto; 
+    overflow: auto;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    padding: 1.5rem; 
+}
+
+#mostrar-amigos{  
+    display: flex;
+    height: auto;
+    box-sizing: border-box;
+    margin:auto;
+    align-self:auto;
+}
+
+#picture-myfreinds{
+    width: 4rem;
+    height: 4em;
+    border-radius: 50%;
+    border: solid #ffff 2px;
+    margin: .2rem auto .2rem 5%;
+    display: flex;
+}
 
 #container-mypost{
-    position: fixed; 
+    /* position: fixed;  */
     margin-top: 1%;    
-    width: 50%; 
-    overflow: auto;
+    width: 90%; 
     box-sizing: border-box;
     padding: 1.5rem;
 }
 
-#container-mypost::-webkit-scrollbar {
-    width: 8px;     
-    height: 8px;   
-    display: none; 
-}
 #boxmypost {
-    height: auto;
-    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 40%;
     margin:auto;
     text-align: center;
-   
 }
 
 .mylike-comment{
@@ -551,16 +620,135 @@ button {
     color: #4F4F4F;
     margin-right: .1rem
 }
-#intereses-title {
-    display: auto;
-    justify-content: auto;
-    align-items: auto;
-}
-#picture-myfreinds{
-    width: 4rem;
-    height: 4em;
-    border-radius: 50%;
-    border: solid #ffff 2px;
-    margin: .2rem auto .2rem 5%;
-    display: flex;
+
+/* Desktop */
+@media screen and (min-width: 700px) and (max-width: 1600px) {
+    .body {
+        background-image: url("./img/backimg.jpg");
+        background-attachment: fixed;
+        margin: 0;
+        background-size: cover;
+    }
+
+    #login{
+        background: rgba(255, 255, 255, 0.45);
+        height: auto;
+        margin: auto auto auto 60%;
+        margin: 0 auto 0 60%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        padding: 2rem;
+    }
+
+    .logo-inicio {
+        width: 50%;
+        height: auto;
+        margin: 30% auto auto auto;
+    }
+    /*se agregar clase*/
+    .login-container{
+        background-color: #ffff;
+        border-radius: 1rem;
+        border-style: none;
+        line-height: 0.1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        height: auto;
+        margin: 6rem 3rem 3rem 3rem;        
+    }
+    input {
+        width: 60%;
+        display: block;
+        margin: 1rem auto auto auto;
+        padding: 1rem 1rem 0 1rem;
+        border-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.62);
+        background-color: transparent;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: #2979FF;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+        
+    #dataregistro>input::placeholder {
+        color: #2979FF;
+    }
+    .buttonWhite {
+        width: 234px;
+        height: 35px;
+        background: #2979FF;
+        border-radius: 10px;
+        border: transparent;
+        color: #FFFFFF;
+        font-size: 1rem;
+        display: block;
+        margin: 2rem auto auto auto;
+        font-weight: 500;
+    }
+    .buttonWhite:hover {
+        cursor: pointer;
+        color: #4F4F4F;       
+    }
+    h4 {
+        color: #4F4F4F;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 1rem 0 1rem .2rem;
+    }
+    h4:hover {
+        color: #2979FF;        
+    }
+
+    .modal {
+        overflow: hidden;
+    }
+    .modal-content {
+        background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;
+        margin: 6% 5% 4% 65%;    
+    }
+
+    fieldset {
+        background-color: #EDEDED;
+        border-radius: 1rem;
+        border-style: none;
+        line-height: 0.1rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        height: auto;
+    }
+    fieldset input {
+        width: 90%;
+    }
+
+    /* The Close Button */
+
+    .close-modal {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close-modal:hover,
+    .close-modal:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .imgRedonda {
+        border: solid #ffff 3px;
+    }
+    button {
+        font-size: 1rem;  
+    }
+    button:hover {               
+        cursor: pointer;
+        color: #4F4F4F;     
+    }
+
 }

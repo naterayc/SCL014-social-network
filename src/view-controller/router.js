@@ -1,10 +1,10 @@
 import { signInView } from '../view/sign-in-controller.js';
-import { wallView } from '../view/wall-controller.js'; 
-import { destinyView } from '../view/destiny-controller.js'; 
-import {profileView } from '../view/profile-controller.js';
+import { wallView } from '../view/wall-controller.js';
+import { destinyView } from '../view/destiny-controller.js';
+import { profileView } from '../view/profile-controller.js';
 
 export const changeRoute = (hash) => {
-    if (hash === '') {
+    if (hash === '' || localStorage.getItem('user') === null) {
         window.location.hash = '#/';
         return showViews('#/');
     }
@@ -12,30 +12,30 @@ export const changeRoute = (hash) => {
 }
 
 const showViews = (hash) => {
-    
+
     const viewsContainer = document.getElementById('containerViews');
-    viewsContainer.innerHTML='';
-    
+    viewsContainer.innerHTML = '';
+
     switch (hash) {
-        case '#/' : 
+        case '#/':
             signInView();
-        break;
-        case '#/wall' :
+            break;
+        case '#/wall':
             wallView();
-        break;
-        case '#/destiny' :
+            break;
+        case '#/destiny':
             destinyView();
-        break;
+            break;
         case '#/profile':
             profileView();
-        break;
-        default: 
+            break;
+        default:
             viewsContainer.innerHTML = `<h2> Not Found Error 404</h2>`
     }
-} 
+}
 
 export const pushState = (route) => {
-    var stateObj = { };
+    var stateObj = {};
     history.pushState(stateObj, "page 2", route);
     window.dispatchEvent(new Event('pushState'));
     window.dispatchEvent(new Event('locationchange'));

@@ -3,7 +3,7 @@ const viewSignIn = `
         <section id="login">
             <img src="img/logo.png" alt="logo" class="logo-inicio">
             <h5> Conoce Descubre Comparte </h5>
-
+            <div class= "login-container">
             <form id="dataregistro">
                 <input type="email" id="mail" placeholder="Correo electrónico" autocomplete="email" required>
                 <input type="password" id="password" placeholder="Contraseña" autocomplete="current-password" required>
@@ -14,6 +14,7 @@ const viewSignIn = `
 
             <h4 id="signInGoogle"><i class="fab fa-google"></i> Ingresar con Google</h4>
             <h4 id="btn-open-modal-register">Registrar usuario</h4>
+            </div>
             <p class="copyright">©2020 HexaKey Group</p>
         </section>
 
