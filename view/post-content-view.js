@@ -14,7 +14,7 @@ const postPlantilla = (docId, image, comments, likes, photo, text, date) =>  `
         
         <div>              
             <span id="commentsNumber" class="like-comment">${ comments }</span><i class="far fa-comment-alt icon"></i>
-            <span id="likesNumber" class="like-comment">${ likes }</span><i class="far fa-heart icon"></i>
+            <span data-id="likesNumber" class="like-comment">${ likes }</span><i class="far fa-heart icon"></i>
         </div>
         <div>
             <img src="${ photo }" id="picture-perfil-post" alt="Foto perfil">  
