@@ -33,6 +33,7 @@ const authGoogle = () => {
                 name: user.displayName,
                 email: user.email,
                 photo: user.photoURL,
+                uid: user.uid,
             }));
 
             pushState('#/wall');
@@ -89,6 +90,7 @@ const signIn = (email, password) => {
                     name: data.user.displayName,
                     email: data.user.email,
                     photo: data.user.photoURL,
+                    uid: data.user.uid,
                 }));
                 pushState('#/wall');
             } else {

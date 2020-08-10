@@ -3,7 +3,7 @@ import {
 } from '../view-controller/router.js'
 import { wallContent } from './wall-view.js';
 import { signOut } from '../lib/firebase/firebase-auth.js';
-import { savePublish, obtenerPublish, deletePublish } from '../lib/firebase/firebase-firestore.js';
+import { savePublish, obtenerPublish, deletePublish, getDoc, updateDoc } from '../lib/firebase/firebase-firestore.js';
 import { postPlantilla } from "./post-content-view.js";
 
 export const wallView = () => {
@@ -48,7 +48,7 @@ export const wallView = () => {
             postText: postText,
             postImg: postImg,
             date: date,
-            likes: 0
+            likes: [],
         }).then(() => {
             getPublishPrint();
         });
@@ -93,17 +93,50 @@ export const wallView = () => {
         container.innerHTML = '';
         obtenerPublish().then((arrayPublish) => {
             renderPublish(arrayPublish, container);
-            const editor = container.querySelectorAll('.show-options');            
+            const editor = container.querySelectorAll('.show-options');
             editor.forEach(icon => {
-               const parentDiv =  icon.parentElement.parentElement;
+                const parentDiv = icon.parentElement.parentElement;
                 icon.addEventListener('click', () => {
                     parentDiv.querySelector('.edit-post').style.display = "flex";
                 });
                 parentDiv.querySelector('.delete-option').addEventListener('click', () => {
-                   deletePublish(parentDiv.dataset.id)
-                   .then(()=>{
-                    getPublishPrint();
-                   })
+                    deletePublish(parentDiv.dataset.id)
+                        .then(() => {
+                            getPublishPrint();
+                        })
+                });
+                parentDiv.querySelector('[data-id="likesNumber"]').addEventListener('click', () => {
+                    console.log('likes');
+                    getDoc(parentDiv.dataset.id)
+                        .then((doc) => {                            
+                            const user = JSON.parse(localStorage.getItem('user'));                            
+                            const docData = doc.data();
+                            //recorre la data y accede al arreglo de likes 
+                            const dataLikes = docData.likes
+                            // busca si exite id en arreglo
+                            const likeIndex = dataLikes.indexOf(user.uid);                            
+                            // si no existe, agregalo
+                            if(likeIndex ===-1){
+                                dataLikes.push(user.uid);
+                            }
+                            // si existe, elimina el id del arreglo
+                            else{
+                                dataLikes.splice(likeIndex,1);
+                            }                            
+                            updateDoc(parentDiv.dataset.id, {
+                                likes: dataLikes
+                            }).then(() => {
+                                //buscar elemento a actualziar del html
+                                const likesUpdate = parentDiv.querySelector('[data-id="likesNumber"]');
+                                //ir a firebase y buscar valor de likes
+                                getDoc(parentDiv.dataset.id)
+                                    .then((doc) => {
+                                        const dataDoc = doc.data();
+                                        //actualizar el valor retornado al html                           
+                                        likesUpdate.innerHTML = dataDoc.likes.length;
+                                    });
+                            });
+                        });
                 });
             });
 
@@ -120,7 +153,7 @@ const renderPublish = (arrayPublish, container) => {
             doc.id,
             data.postImg,
             0,
-            data.likes,
+            data.likes.length,
             'https://avatars2.githubusercontent.com/u/66418488?s=460&u=426e67c2f5f2fb4dc243355a6c1f2da9841a0370&v=4',
             data.postText,
             data.date

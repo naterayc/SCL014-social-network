@@ -48,9 +48,25 @@ const deletePublish = (postId) =>{
     });
 };
 
+const getDoc = (postId) => {
+    return db
+    .collection("publicaciones")
+    .doc(postId)
+    .get();      
+};
+
+const updateDoc = (postId, data) => {
+    return db
+    .collection("publicaciones")
+    .doc(postId)
+    .update(data);      
+};
+
 export {
     registerUser,
     obtenerPublish,
     savePublish,
-    deletePublish
+    deletePublish,
+    getDoc,
+    updateDoc
 }
