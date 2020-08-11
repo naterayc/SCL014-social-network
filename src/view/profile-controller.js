@@ -1,9 +1,9 @@
-import {
-    changeRoute, pushState
-} from '../view-controller/router.js'
+import { pushState } from '../view-controller/router.js'
 import { profileContent } from './profile-view.js';
 
 export const profileView = () => {
+
+    document.getElementById('body').style.background = 'transparent';
    
     const profileWall = document.createElement('div');
     profileWall.setAttribute('id', 'contenedor');

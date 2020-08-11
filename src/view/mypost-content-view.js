@@ -1,11 +1,11 @@
 const mypostPlantilla = `
-<div id="post-note">
+<div id="mypost-note">
     <div>
         <i class="fas fa-ellipsis-h icon"></i>
     </div>
 
     <div>
-        <img src="img/islandia.jpg"  alt="Foto post" class="img-cuadrada">
+        <img src="img/islandia.jpg"  alt="Foto post" class="img-mypost">
     </div>
 
     <div>
