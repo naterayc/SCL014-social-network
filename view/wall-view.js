@@ -53,7 +53,7 @@ ${ header}
         </div>
         <div id="load">
             <input type="file" id="load-photo" accept="image/*"/>
-            <label class="load-picture">Cargar foto <i class="far fa-image"></i></label>
+            <label for="load-photo" class="load-picture">Cargar foto <i class="far fa-image"></i></label>
         </div>
     </div>
         <div id="publish"> Publicar </div>
