@@ -25,8 +25,8 @@ Nómada la aplicación web para viajeros y aventureros, donde podrás compartir 
 
 Según un estudio realizado por Booking .com y realizado de forma independiente entre adultos que habían viajado en los últimos 12 meses o que pensaban hacerlo en los próximos 12, se obtuvo:
 
-    -Al 60% de los viajeros globales les gustaría tener acceso a un servicio (app/web) que les recomendase destinos en los que un aumento del turismo tendría un impacto positivo en la comunidad local.
-    -El 59% de las personas quiere que la tecnología les proponga opciones que les sorprendan con algo totalmente nuevo.
+   -Al 60% de los viajeros globales les gustaría tener acceso a un servicio (app/web) que les recomendase destinos en los que un aumento del turismo tendría un impacto positivo en la comunidad local.
+   -El 59% de las personas quiere que la tecnología les proponga opciones que les sorprendan con algo totalmente nuevo.
 
 Para el proceso de research UX que nos permitió identificar a los potenciales usuarios de una red social para viajeros, se realizaron encuestas utilizando la herramienta Google Forms, y además nos encontramos con una problemática común en ellos.
 
