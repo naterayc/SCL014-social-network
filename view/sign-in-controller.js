@@ -14,7 +14,7 @@ import { registerUser } from '../lib/firebase/firebase-firestore.js';
 
 
 export const signInView = () => {
-   
+
     const divSignIn = document.createElement('div');
     divSignIn.setAttribute('id', 'contenedor');
     divSignIn.innerHTML = viewSignIn;
@@ -27,8 +27,17 @@ export const signInView = () => {
         authGoogle();
     });
     // evento para validar
-    divSignIn.querySelector('#mail').addEventListener('input', validator);
-    document.querySelector('#password').addEventListener('input', validator);
+    const validateEmailAndPassword = () => {
+        const btnSignIn = document.getElementById('ingreso')
+        const emailSignIn = document.querySelector('#mail');
+        const passwordSignIn = document.querySelector('#password');
+        const result = validator(emailSignIn.value, passwordSignIn.value);
+        btnSignIn.disabled = result;
+    };
+
+    divSignIn.querySelector('#mail').addEventListener('input', validateEmailAndPassword);
+    document.querySelector('#password').addEventListener('input', validateEmailAndPassword);
+
     // ingresar
     document.querySelector('#ingreso').addEventListener('click', () => {
         const email = document.querySelector('#mail').value;
@@ -67,14 +76,21 @@ export const signInView = () => {
     const lastName = document.getElementById('lname-register');
     const birthday = document.getElementById('birthday-register');
     const country = document.getElementById('country-register');
-
-    email.addEventListener('input', validatorRegister);
-    password.addEventListener('input', validatorRegister);
-
     const btnRegister = document.getElementById('btn-register');
+
+    const validateInputsRegister = () => {
+        const emailValid = email.validity.valid;
+        const passwordValid = password.validity.valid;
+        const result = validatorRegister(email.value, password.value, emailValid, passwordValid);
+        btnRegister.disabled = result;
+    };
+
+    email.addEventListener('input', validateInputsRegister);
+    password.addEventListener('input', validateInputsRegister);
+
     btnRegister.addEventListener('click', () => {
         const valueEmail = email.value;
-        const valuePassword = password.value;        
+        const valuePassword = password.value;
         createUser(valueEmail, valuePassword);
         registerUser({
             user: user.value,

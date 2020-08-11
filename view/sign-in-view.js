@@ -38,11 +38,11 @@ const viewSignIn = `
                     </form>
 
                     <section>
-                        <form action="/action_page.php">
+                        <form action="#">
                             <h2>Cuenta:</h2>
                             <fieldset>
                                 <input type="email" id="email-register" placeholder="Correo electrónico" autocomplete="email" required><br><br>
-                                <input type="password" id="password-register" placeholder="Contraseña" autocomplete="current-password" require><br><br>
+                                <input type="password" id="password-register" placeholder="Contraseña" autocomplete="current-password" required><br><br>
                             </fieldset>
                             <div id="msgRegister-error" class="hide"><span>Datos inválidos</span></div>
                             <div id="activa-registro" class="hide"><span>Ve a tu correo para activar cuenta</span></div>
