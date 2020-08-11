@@ -34,30 +34,33 @@ input {
     color: #ffffff;
 }
 
-#msg-error {
+#sign-wrong-password {
     width:70%;
     margin:auto;
     padding: .8rem .3rem .3rem .3rem; 
 }
-#msg-error>span{
+#sign-wrong-password>span{
     font-family: 'Roboto';
     color: #ffffff;
 }
-#msgRegister-error {
+#sign-email-not-found {
+    width:70%;
+    margin:auto;
+    padding: .8rem .3rem .3rem .3rem; 
+}
+#sign-email-not-found>span{
+    font-family: 'Roboto';
+    color: #ffffff;
+}
+#weak-password {
     width: 70%;
     margin:auto;
     padding: .8rem 0 .3rem 0;
 }
-#msgRegister-error>span {
+#weak-password>span {
     font-family: 'Roboto';
     align-items: center;
 }
-/*
-input::first-line {
-    margin-top: 2rem;
-}
-*/
-
 
 /*titulos*/
 
@@ -103,11 +106,6 @@ a {
     text-decoration: none;
     color: #2979FF;
 }
-
-/*::placeholder {
-    color: #ffff;
-    font-weight: 300;
-}*/
 
 .logo-inicio {
     width: 55%;
@@ -185,7 +183,6 @@ a {
 }
 
 .public {
-    display: flex;
     border: solid 1px #004ECB;
     border-radius: 10px;
     width: 80%;
@@ -214,9 +211,17 @@ a {
     color: #004ECB;
     margin: 1% 0 5% 75%;
 }
+.flex {
+    display:flex;
+}
+#load-photo{
+    right: 0;
+    margin: auto 0 auto auto;
+    padding: 0;
+}
 
 .button2 {
-    width: 90%;
+    width: 80%;
     height: 3rem;
     background: #2979FF;
     border-radius: 10px;
@@ -228,6 +233,9 @@ a {
     font-weight: 500;
 }
 
+.disabled {
+    opacity:50%
+}
 /*logo de las secciones de la app */
 
 .logo {
@@ -435,7 +443,7 @@ button {
 .img-cuadrada{
     margin:auto;
     width: 95%;
-    height: auto;
+    max-height: 280px;
     
 }
 
@@ -609,7 +617,7 @@ button {
 #container-mypost{
     position: auto;
     margin-top: 1%;    
-    width: auto; 
+    width: 100%; 
     box-sizing: border-box;
     padding: 1rem;
     height: auto;
@@ -617,13 +625,14 @@ button {
 }
 #boxmypost {
     display: flex;
-    width: auto;
+    width: 100%;
     margin:auto;
-    align-self:auto;
+    justify-content: space-around;
 }
 #mypost-note{
     display: flex;
-    width: auto;
+    justify-content: flex-end;
+    width: 40%;
     height: auto;
     box-sizing: border-box;
     flex-wrap: wrap;
@@ -643,136 +652,238 @@ button {
     color: #4F4F4F;
     align-items: left;
 }
+.container-left {
+    display : none;
+}
+
+.container-right {
+    display : none;
+}
 
 /* Desktop */
 @media screen and (min-width: 700px) and (max-width: 1600px) {
-    .body {
-        background-image: url("./img/backimg.jpg");
-        background-attachment: fixed;
-        margin: 0;
-        background-size: cover;
-    }
-
-    #login{
-        background: rgba(255, 255, 255, 0.45);
-        height: auto;
-        margin: auto auto auto 60%;
-        margin: 0 auto 0 60%;
-        top: 0;
-        bottom: 0;
-        position: absolute;
-        padding: 2rem;
-    }
-
-    .logo-inicio {
-        width: 50%;
-        height: auto;
-        margin: 30% auto auto auto;
-    }
-    
-    /*se agregar clase*/
-    .login-container{
-        background-color: #ffff;
-        border-radius: 1rem;
-        border-style: none;
-        line-height: 0.1rem;
-        padding: 1rem 1rem 1rem 1rem;
-        height: auto;
-        margin: 6rem 3rem 3rem 3rem;        
-    }
-    input {
-        width: 60%;
+        .body {
+            background-image: url("./img/backimg.jpg");
+            background-attachment: fixed;
+            margin: 0;        
+            background-size: cover;
+            overflow-y: hidden;
+        }   
+        #login{
+            background: rgba(255, 255, 255, 0.45);
+            height: auto;
+            margin: auto auto auto 60%;
+            margin: 0 auto 0 60%;
+            top: 0;
+            bottom: 0;
+            position: absolute;
+            padding: 2rem;
+        }
+        .logo-inicio {
+            width: 50%;
+            height: auto;
+            margin: 30% auto auto auto;
+        }
+        /*se agregar clase*/
+        .login-container{
+            background-color: #ffff;
+            border-radius: 1rem;
+            border-style: none;
+            line-height: 0.1rem;
+            padding: 1rem 1rem 1rem 1rem;
+            height: auto;
+            margin: 6rem 3rem 3rem 3rem;        
+        }
+        input {
+            width: 60%;
+            display: block;
+            margin: 1rem auto auto auto;
+            padding: 1rem 1rem 0 1rem;
+            border-style: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.62);
+            background-color: transparent;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            color: #2979FF;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+        #dataregistro>input::placeholder {
+            color: #2979FF;
+        }
+        .buttonWhite {
+            width: 234px;
+            height: 35px;
+            background: #2979FF;
+            border-radius: 10px;
+            border: transparent;
+            color: #FFFFFF;
+            font-size: 1rem;
+            display: block;
+            margin: 2rem auto auto auto;
+            font-weight: 500;
+        }
+        .buttonWhite:hover {
+            cursor: pointer;
+            color: #4F4F4F;       
+        }
+        h4 {
+            color: #4F4F4F;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 1rem 0 1rem .2rem;
+        }
+        h4:hover {
+            color: #2979FF;        
+        }
+        .modal {
+            overflow: hidden;
+        }
+        .modal-content {
+            background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+            border-radius: 1rem;
+            width: 30%;
+            height: auto;
+            margin: 6% 5% 4% 65%;    
+        }
+        fieldset {
+            background-color: #EDEDED;
+            border-radius: 1rem;
+            border-style: none;
+            line-height: 0.1rem;
+            padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+            height: auto;
+        }
+        fieldset input {
+            width: 90%;
+        }
+        /* The Close Button */
+        .close-modal {
+            color: #AAAAAA;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .logo {
+            margin: auto;
+            width: 15%;
+            height: auto;
+        }
+        .close-modal:hover,
+        .close-modal:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .imgRedonda {
+            border: solid #ffff 3px;
+        }
+        button {
+            font-size: 1rem;  
+        }
+        button:hover {               
+            cursor: pointer;
+            color: #4F4F4F;     
+        }
+        #wall {
+            width: 30%;
+            margin: 5% auto auto auto;
+            position: fixed;
+            left: 35%; 
+        }
+        .public {       
+            width: 90%;
+            padding: .2rem;
+            margin: 0.2rem auto .2rem auto; 
+        }
+        #container-post {
+            width: 40%;
+            margin: 20% auto 1% 30%;
+            max-height: 450px;
+            display: inline-grid;
+            scroll-snap-align: end;          
+            height: 520px;        
+            scroll-padding-top: 5%;
+            padding: 0;        
+            /*padding: 0.5rem 8rem 0.5rem 8rem;*/
+        }
+        #post-note{
+            border-radius: 7px;
+        }
+        #post-note div {        
+            padding: .3rem 0rem 0rem 0rem; 
+        }
+        .container-left {
+            display: inline-grid;
+            width: 27%;
+            margin: 7% auto auto auto;
+            left: 0;
+            position: fixed;
+        }
+        .container-right {
+            display: inline-grid;
+            width: 27%;
+            margin: 7% auto auto auto;
+            position: fixed;
+            right: 0;
+        }
+        /* barra inferior */
+        #barra {
         display: block;
-        margin: 1rem auto auto auto;
-        padding: 1rem 1rem 0 1rem;
-        border-style: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.62);
-        background-color: transparent;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        color: #2979FF;
-        font-size: 1rem;
-        font-weight: 300;
-    }
-        
-    #dataregistro>input::placeholder {
-        color: #2979FF;
-    }
-    .buttonWhite {
-        width: 234px;
-        height: 35px;
-        background: #2979FF;
-        border-radius: 10px;
-        border: transparent;
-        color: #FFFFFF;
-        font-size: 1rem;
-        display: block;
-        margin: 2rem auto auto auto;
-        font-weight: 500;
-    }
-    .buttonWhite:hover {
-        cursor: pointer;
-        color: #4F4F4F;       
-    }
-    h4 {
-        color: #4F4F4F;
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 400;
-        margin: 1rem 0 1rem .2rem;
-    }
-    h4:hover {
-        color: #2979FF;        
-    }
-
-    .modal {
-        overflow: hidden;
-    }
-    .modal-content {
+        width: 100%;
         background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
-        border-radius: 1rem;
-        width: 30%;
-        height: auto;
-        margin: 6% 5% 4% 65%;    
+        transform: rotate(180deg);
+    }    
+        #barra span>i {
+            display: none;
+        }
+        .head {
+            position: fixed;
+            top: 0;
+            padding: 0.5rem;
+        }
+        .button2 {       
+            margin: 0 auto auto auto;
+            display: none;      
+        }
+        .profile-picture {
+        display: none;
+        }
+        .fa-chevron-left:before {
+            display: none;
+        }
+        #destinos{
+            display: inline-block;
+            flex-direction: column;
+            height: 450px;
+            overflow-y: scroll;
+            scroll-padding-top: 10%;
+            scroll-snap-align: start;
+        }
+        #destinos::-webkit-scrollbar {
+            width: 8px;     
+            height: 8px;   
+            display: none; 
+        }
+        #destiny-img:hover {
+            transform: scale(1.1,1.1);
+        }
+        #info-viajero{
+            display: block;
+        }
+        #box {
+            width: 80%;
+            height: auto;
+            box-sizing: border-box;
+            margin: auto auto .7rem auto;
+            text-align: center;
+        }
+        #destiny-img {
+            justify-self: center;
+            width: 95%;
+            height: 8rem;
+            margin: auto auto auto .5rem;
+        }
     }
-
-    fieldset {
-        background-color: #EDEDED;
-        border-radius: 1rem;
-        border-style: none;
-        line-height: 0.1rem;
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-        height: auto;
-    }
-    fieldset input {
-        width: 90%;
-    }
-
-    /* The Close Button */
-
-    .close-modal {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close-modal:hover,
-    .close-modal:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
-    .imgRedonda {
-        border: solid #ffff 3px;
-    }
-    button {
-        font-size: 1rem;  
-    }
-    button:hover {               
-        cursor: pointer;
-        color: #4F4F4F;     
-    }
-
-}

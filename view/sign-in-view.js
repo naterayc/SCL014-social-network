@@ -7,10 +7,11 @@ const viewSignIn = `
             <form id="dataregistro">
                 <input type="email" id="mail" placeholder="Correo electrónico" autocomplete="email" required>
                 <input type="password" id="password" placeholder="Contraseña" autocomplete="current-password" required>
-                <div id="msg-error" class="hide"><span >El correo o contraseña ingresados no son válidos</span></div>
+                <div id="sign-wrong-password" class="hide"><span>Contraseña invalida</span></div>
+                <div id="sign-email-not-found" class="hide"><span>El correo ingresado no existe</span></div>
             </form>
 
-            <button id="ingreso" class="buttonWhite" type="button" disabled="true">Ingresar</button>
+            <button id="ingreso" class="buttonWhite disabled" type="button" disabled="true">Ingresar</button>
 
             <h4 id="signInGoogle"><i class="fab fa-google"></i> Ingresar con Google</h4>
             <h4 id="btn-open-modal-register">Registrar usuario</h4>
@@ -44,11 +45,11 @@ const viewSignIn = `
                                 <input type="email" id="email-register" placeholder="Correo electrónico" autocomplete="email" required><br><br>
                                 <input type="password" id="password-register" placeholder="Contraseña" autocomplete="current-password" required><br><br>
                             </fieldset>
-                            <div id="msgRegister-error" class="hide"><span>Datos inválidos</span></div>
+                            <div id="weak-password" class="hide"><span>La contraseña es muy débil. Debe contener al menos 6 caracteres.</span></div>
                             <div id="activa-registro" class="hide"><span>Ve a tu correo para activar cuenta</span></div>
                         </form>
                     </section>
-                    <button id="btn-register" type="button" disabled="true">Registrar</button>
+                    <button id="btn-register" type="button" class="disabled" disabled="true">Registrar</button>
                 </section>
             </section>
         </section>

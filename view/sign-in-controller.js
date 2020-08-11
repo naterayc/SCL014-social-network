@@ -33,6 +33,11 @@ export const signInView = () => {
         const passwordSignIn = document.querySelector('#password');
         const result = validator(emailSignIn.value, passwordSignIn.value);
         btnSignIn.disabled = result;
+        if(result === false) {
+            btnSignIn.classList.remove('disabled');
+        } else {
+            btnSignIn.classList.add('disabled');
+        }
     };
 
     divSignIn.querySelector('#mail').addEventListener('input', validateEmailAndPassword);
@@ -83,6 +88,11 @@ export const signInView = () => {
         const passwordValid = password.validity.valid;
         const result = validatorRegister(email.value, password.value, emailValid, passwordValid);
         btnRegister.disabled = result;
+        if(result === false) {
+            btnRegister.classList.remove('disabled');
+        } else {
+            btnRegister.classList.add('disabled');
+        }
     };
 
     email.addEventListener('input', validateInputsRegister);
