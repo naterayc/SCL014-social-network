@@ -51,7 +51,10 @@ ${ header}
             <img id="user-photo" src="img/islandia.jpg" class="profile-picture">
             <input id="post-title" class="inputpublic" type="text" placeholder="¿Que quieres compartir?"/>
         </div>
-        <input type="file" id="load-photo" accept="image/*"/>
+        <div id="load">
+            <input type="file" id="load-photo" accept="image/*"/>
+            <label class="load-picture">Cargar foto <i class="far fa-image"></i></label>
+        </div>
     </div>
         <div id="publish"> Publicar </div>
         <button id="post" type="button" class="button2">Destinos destacados</button>
