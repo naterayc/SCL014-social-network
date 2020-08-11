@@ -1,11 +1,20 @@
-// importamos la funcion que vamos a testear
-import { myFunction } from "../src/lib/index";
 
-describe('myFunction', () => {
+import { registerUser } from "../src/lib/firebase/firebase-firestore.js";
+
+const firebase = jest.genMockFromModule('firebase');
+
+    firebase.initializeApp = jest.fn();
+
+describe('registerUser', () => {
   it('debería ser una función', () => {
-    expect(typeof myFunction).toBe('function');
+
+    
+    registerUser()
   });
 });
+
+
+
 
 /* Pantalla de inicio
 Si el User / Passwodd = ""  O alguno de los dos campos esta vacio => Muestra mensaje  e inhabilitar boton de iniciar Sesion.

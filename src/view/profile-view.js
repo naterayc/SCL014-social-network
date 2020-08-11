@@ -3,13 +3,12 @@ import { mypostPlantilla } from "./mypost-content-view.js"
 
 const profileContent = `
 <section id="info-viajero">
-    <div>
-       <img src="img/islandia.jpg" alt="Foto perfil" class="img-profile">     
-    </div>
-    <div>
+    <img src="img/islandia.jpg" alt="Foto perfil" class="img-profile">     
+    <div id="datos-viajero">
         <p class="user-name"> Viajera frecuente </p>
         <p class="user-info"> Me gusta la naturaleza y el sonido del mar </p>
         <span class="user-info"><i class="fas fa-map-marker-alt"></i> Santiago de Chile</span>
+    </div>
 </section>
 
 <section id="icons-profile">
@@ -23,9 +22,12 @@ const profileContent = `
 </section>
 
 <section id="intereses">
-    <div id="interes-title">
-       <h5> America </h5> 
-       <h5> Comida </h5>
+    <h2> Mis Intereses </h2> 
+    <div id="boxdeinteres">
+        <p id="titulo-interes"> America </p> 
+        <p id="titulo-interes"> Comida </p> 
+        <p id="titulo-interes"> Naturaleza </p> 
+     
     </div>
 </section>
  
@@ -39,10 +41,10 @@ const profileContent = `
 </section>
 
 <section id= "container-mypost">
+    <h2> Mis Post </h2>
     <div id="boxmypost">
-    ${ mypostPlantilla } 
-    ${ mypostPlantilla } 
-    ${ mypostPlantilla } 
+        ${ mypostPlantilla } 
+        ${ mypostPlantilla }         
     </div>
 </section>
 ${ footer }
