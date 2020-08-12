@@ -67,8 +67,9 @@ input {
 h2 {
     color: #333333;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
-    font-size: 1rem;
+    text-align: start;
+    margin: 0.5rem 0 0.5rem 1rem;
+    font-size: 0.9rem;
 }
 
 h4 {
@@ -218,8 +219,8 @@ a {
 }
 .load-picture{
     font-family: 'roboto';
-    font-size: 1rem;
-    color:#004ECB;
+    font-size: .9rem;
+    color:#4F4F4F;
 }
 input[type="file"] {
     opacity: 0;
@@ -547,23 +548,22 @@ button {
 }
 #datos-viajero {
     height: auto;
-    flex-wrap: wrap;
-    display: flex;
+    display: flow-root;
+    line-height: 1.5rem;
+    margin-top: 7%;
 }
 .user-name {
     font-family: 'roboto';
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #4F4F4F;
-    margin: .8rem auto auto auto;
-    text-align: center;
+    margin: 0 auto auto 0;
 }
 .user-info {
     font-family: 'roboto';
-    font-size: .9rem;
+    font-size: .8rem;
     color: #4F4F4F;
-    margin: .5rem auto .5rem auto;
-    text-align: center;
-    padding: .5rem;
+    margin: 0 auto 0 auto;
+    text-align: start;
 }
 .img-profile {
     width: 7rem;
@@ -575,7 +575,8 @@ button {
     text-align: center;
 }
 #iconos{
-    margin-left:5%;
+    text-align: start;
+    margin: 0.5rem auto 0.5rem 1rem;
 }
 .iconos-profile {
     margin-left:1%;
@@ -597,6 +598,7 @@ button {
     margin: .2rem auto .2rem auto;
     display: flex;
     align-self:auto;
+    padding: 0.4rem;
 }
 #titulo-interes {
     width: auto;
@@ -604,11 +606,11 @@ button {
     padding: .5rem; 
     margin: auto;
     display: flex;
-    background: #ffffff6a;
-    color: #333333;
+    background: #C5E0EF;
+    color: #004ECB;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 1 rem;;
+    font-size: 0.8rem;;
 }
 #freinds{ 
     margin-top: auto;    
@@ -616,7 +618,7 @@ button {
     overflow: auto;
     box-sizing: border-box;
     flex-wrap: wrap;
-    padding: 1rem; 
+    padding: 0.2rem; 
 }
 #mostrar-amigos{  
     display: flex;
@@ -638,7 +640,7 @@ button {
     margin-top: 1%;    
     width: 100%; 
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 0.2rem;
     height: auto;
     overflow: auto;
 }
@@ -663,7 +665,8 @@ button {
     margin: 2.5%;
     box-sizing: border-box;
     width: 95%;
-    height: auto;
+    height: 100px;
+    object-fit: cover;
 }
 .mylike-comment{
     font-family: 'roboto';
@@ -819,11 +822,11 @@ button {
         }
         #container-post {
             width: 40%;
-            margin: 20% auto 1% 30%;
-            max-height: 450px;
+            margin: 13% auto 1% 30%;
+            max-height: 480px;
             display: inline-grid;
             scroll-snap-align: end;          
-            height: 520px;        
+            /*height: 520px;*/        
             scroll-padding-top: 5%;
             padding: 0;        
             /*padding: 0.5rem 8rem 0.5rem 8rem;*/
@@ -837,14 +840,15 @@ button {
         .container-left {
             display: inline-grid;
             width: 27%;
-            margin: 7% auto auto auto;
+            margin: 1% auto auto auto;
             left: 0;
             position: fixed;
+            padding-left: .5rem;
         }
         .container-right {
             display: inline-grid;
             width: 27%;
-            margin: 7% auto auto auto;
+            margin: 1% auto auto auto;
             position: fixed;
             right: 0;
         }
@@ -859,9 +863,15 @@ button {
             display: none;
         }
         .head {
-            position: fixed;
+            /* position: fixed; */
             top: 0;
             padding: 0.5rem;
+        }
+        .signout {
+            align-items: flex-end;
+            width: 12%;
+            margin-left: auto;
+            padding: .1rem;
         }
         .button2 {       
             margin: 0 auto auto auto;
@@ -885,30 +895,33 @@ button {
             width: 8px;     
             height: 8px;   
             display: none; 
-        }
+        }                
         #destiny-img:hover {
             transform: scale(1.1,1.1);
         }
         #info-viajero{
             display: block;
         }
-        .user-name {
-            font-family: 'roboto';
-            font-size: 1.2rem;
-            color: #4f4f4f;
+       
+        .img-cuadrada{            
+            border-radius: 7px;
+            width: 90%;
+            max-height: 360px;
+            object-fit: cover;
+            
+        }
+        .user-name {            
+            font-size: 1.2rem;           
             margin: .8rem auto auto auto;
             text-align: center;
         }
         .img-profile {
-            width: 7rem;
-            height: 7rem;
+            width: 9rem;
+            height: 9rem;
             border-radius: 50%;
             margin-right: 40%;
             margin: auto;
             display: block;
-        }
-        #iconos {
-            text-align: center;
         }
         #box {
             width: 80%;
@@ -922,5 +935,27 @@ button {
             width: 95%;
             height: 8rem;
             margin: auto auto auto .5rem;
+            object-fit: cover;
+        }
+        .user-info {
+            font-family: 'roboto';
+            font-size: .9rem;
+            margin: 0 auto 0 auto;
+            text-align: center;
+        }
+         #iconos{
+            text-align: center;
+            margin: auto auto auto auto;
+        }
+        #datos-viajero {
+            height: auto;
+            display: grid;
+            line-height: 1.5rem;
+            margin: 7% auto 7% auto;
+        }
+        h2 {
+            text-align: center;
+            margin: 0.8rem 0 0.8rem 1rem;
+            font-size: 1rem;
         }
     }
