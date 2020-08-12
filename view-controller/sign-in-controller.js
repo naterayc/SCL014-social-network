@@ -58,7 +58,7 @@ export const signInView = () => {
     const btnOpenModal = document.getElementById('btn-open-modal-register');
     const btncloseModal = document.getElementsByClassName('close-modal')[0];
 
-    // Cuando el usuario haga clic en el botón, abra la modal
+    // Cuando el usuario haga clic en el botón, abra el modal
     btnOpenModal.addEventListener('click', () => {
         modal.style.display = "block";
     });
@@ -73,7 +73,7 @@ export const signInView = () => {
         }
     });
 
-    //evento para validar
+   //declarando variables
     const email = document.getElementById('email-register');
     const password = document.getElementById('password-register');
     const user = document.getElementById('user-register');
@@ -83,6 +83,7 @@ export const signInView = () => {
     const country = document.getElementById('country-register');
     const btnRegister = document.getElementById('btn-register');
 
+    //condicionamiento dependiendo de la validacion de los inputs
     const validateInputsRegister = () => {
         const emailValid = email.validity.valid;
         const passwordValid = password.validity.valid;
@@ -95,9 +96,11 @@ export const signInView = () => {
         }
     };
 
+    //evento para validar inputs de registro
     email.addEventListener('input', validateInputsRegister);
     password.addEventListener('input', validateInputsRegister);
 
+    //crea y registra al usuario
     btnRegister.addEventListener('click', () => {
         const valueEmail = email.value;
         const valuePassword = password.value;

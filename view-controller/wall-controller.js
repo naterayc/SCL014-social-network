@@ -1,9 +1,13 @@
-import {
-    changeRoute, pushState
-} from './router.js'
+import { pushState } from './router.js'
 import { wallContent } from '../view/wall-view.js';
 import { signOut } from '../lib/firebase/firebase-auth.js';
-import { savePublish, obtenerPublish, deletePublish, getDoc, updateDoc } from '../lib/firebase/firebase-firestore.js';
+import { 
+    savePublish,
+    obtenerPublish,
+    deletePublish,
+    getDoc,
+    updateDoc
+ } from '../lib/firebase/firebase-firestore.js';
 import { postPlantilla } from "../view/post-content-view.js";
 
 export const wallView = () => {
@@ -17,12 +21,14 @@ export const wallView = () => {
 
     const container = document.querySelector('#container-post');
 
+    //coloca foto del usuario cuando este tenga alguna
     const user = JSON.parse(localStorage.getItem('user'));
     if (user.photo !== null) {
         const userPhoto = document.querySelector('#user-photo');
         userPhoto.setAttribute('src', user.photo);
     }
 
+    //carga fotos 
     let photo = null;
     const loadPhoto = document.querySelector('#load-photo');
     loadPhoto.addEventListener('change', () => {
@@ -30,8 +36,6 @@ export const wallView = () => {
         const reader = new FileReader();
         reader.onloadend = function () {
             photo = reader.result;
-            // Since it contains the Data URI, we should remove the prefix and keep only Base64 string
-            // var b64 = reader.result.replace(/^data:.+;base64,/, '');
             console.log('archivo cargado');
         };
 
@@ -39,6 +43,7 @@ export const wallView = () => {
 
     });
 
+    //se publica el post
     const publish = document.querySelector('#publish');
     publish.addEventListener('click', () => {
         const postText = document.querySelector('#post-title').value;
@@ -68,8 +73,27 @@ export const wallView = () => {
     signOutBar.addEventListener('click', () => {
         signOut();
         const body = document.getElementById('body');
-        body.style.background = 'linear-gradient(180deg, #FFFFFF 6.25%, #C5E0EF 35.94%, #2979FF 76.04%)';
-        body.style.backgroundAttachment = ' fixed';
+        const screen = window.matchMedia('(min-width: 700px)');        
+        const showWallDesktop = () => {
+            const myMedia = (screenSize) => {
+                if (screenSize.matches) { // If media query matches
+                    /*console.log('screen mayor 700px');*/
+                    body.style.background = 'trasparent';
+                    body.style.backgroundImage = 'url("./img/backimg.jpg")';
+                    body.style.backgroundAttachment = 'fixed';
+                    body.style.margin = '0';        
+                    body.style.backgroundSize= 'cover';               
+                    
+                } else {
+                    /*console.log('screen menor 700px');*/
+                    body.style.background = 'linear-gradient(180deg, #FFFFFF 6.25%, #C5E0EF 35.94%, #2979FF 76.04%)';
+                    body.style.backgroundAttachment = ' fixed';
+                }
+            };
+            myMedia(screen); // Call listener function at run time
+            screen.addListener(myMedia); // Attach listener function on state changes
+        };
+        showWallDesktop();
     });
 
     const goTop = document.getElementById('home');
@@ -83,12 +107,7 @@ export const wallView = () => {
         pushState('#/profile');
     });
 
-    /*const postConfig = document.getElementById('show-options');
-    const editPost = document.getElementById('edit-post');
-    postConfig.addEventListener('click', () => {
-        editPost.style.display = "flex";
-    });*/
-
+    
     const getPublishPrint = () => {
         container.innerHTML = '';
         obtenerPublish().then((arrayPublish) => {
@@ -105,6 +124,7 @@ export const wallView = () => {
                             getPublishPrint();
                         })
                 });
+                // evento para dar like a los post
                 parentDiv.querySelector('[data-id="likesNumber"]').addEventListener('click', () => {
                     console.log('likes');
                     getDoc(parentDiv.dataset.id)
@@ -126,7 +146,7 @@ export const wallView = () => {
                             updateDoc(parentDiv.dataset.id, {
                                 likes: dataLikes
                             }).then(() => {
-                                //buscar elemento a actualziar del html
+                                //buscar elemento a actualizar del html
                                 const likesUpdate = parentDiv.querySelector('[data-id="likesNumber"]');
                                 //ir a firebase y buscar valor de likes
                                 getDoc(parentDiv.dataset.id)
@@ -145,7 +165,7 @@ export const wallView = () => {
 
     getPublishPrint();
 }
-
+//pinta los post en pantalla
 const renderPublish = (arrayPublish, container) => {
     arrayPublish.forEach(doc => {
         const data = doc.data();
