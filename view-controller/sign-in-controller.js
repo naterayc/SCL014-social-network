@@ -18,7 +18,7 @@ export const signInView = () => {
     const divSignIn = document.createElement('div');
     divSignIn.setAttribute('id', 'contenedor');
     divSignIn.innerHTML = viewSignIn;
-    document.getElementById('containerViews').appendChild(divSignIn);
+    document.querySelector('#containerViews').appendChild(divSignIn);
 
     // declarando variables
     const signInWithGoogle = divSignIn.querySelector('#signInGoogle');
@@ -28,12 +28,12 @@ export const signInView = () => {
     });
     // evento para validar
     const validateEmailAndPassword = () => {
-        const btnSignIn = document.getElementById('ingreso')
+        const btnSignIn = document.querySelector('#ingreso')
         const emailSignIn = document.querySelector('#mail');
         const passwordSignIn = document.querySelector('#password');
         const result = validator(emailSignIn.value, passwordSignIn.value);
         btnSignIn.disabled = result;
-        if(result === false) {
+        if (result === false) {
             btnSignIn.classList.remove('disabled');
         } else {
             btnSignIn.classList.add('disabled');
@@ -54,9 +54,9 @@ export const signInView = () => {
     });
 
     // Mostrar modal
-    const modal = document.getElementById('myModal');
-    const btnOpenModal = document.getElementById('btn-open-modal-register');
-    const btncloseModal = document.getElementsByClassName('close-modal')[0];
+    const modal = document.querySelector('#myModal');
+    const btnOpenModal = document.querySelector('#btn-open-modal-register');
+    const btncloseModal = document.querySelector('.close-modal');
 
     // Cuando el usuario haga clic en el botón, abra el modal
     btnOpenModal.addEventListener('click', () => {
@@ -73,23 +73,33 @@ export const signInView = () => {
         }
     });
 
-   //declarando variables
-    const email = document.getElementById('email-register');
-    const password = document.getElementById('password-register');
-    const user = document.getElementById('user-register');
-    const firstName = document.getElementById('fname-register');
-    const lastName = document.getElementById('lname-register');
-    const birthday = document.getElementById('birthday-register');
-    const country = document.getElementById('country-register');
-    const btnRegister = document.getElementById('btn-register');
+    //declarando variables
+    const email = document.querySelector('#email-register');
+    const password = document.querySelector('#password-register');
+    const user = document.querySelector('#user-register');
+    const firstName = document.querySelector('#fname-register');
+    const lastName = document.querySelector('#lname-register');
+    const birthday = document.querySelector('#birthday-register');
+    const country = document.querySelector('#country-register');
+    const btnRegister = document.querySelector('#btn-register');
 
     //condicionamiento dependiendo de la validacion de los inputs
     const validateInputsRegister = () => {
         const emailValid = email.validity.valid;
         const passwordValid = password.validity.valid;
-        const result = validatorRegister(email.value, password.value, emailValid, passwordValid);
+        const result = validatorRegister(
+            email.value,
+            password.value,
+            user.value,
+            firstName.value,
+            lastName.value,
+            birthday.value,
+            country.value, 
+            emailValid,
+            passwordValid,
+        );
         btnRegister.disabled = result;
-        if(result === false) {
+        if (result === false) {
             btnRegister.classList.remove('disabled');
         } else {
             btnRegister.classList.add('disabled');
@@ -99,6 +109,11 @@ export const signInView = () => {
     //evento para validar inputs de registro
     email.addEventListener('input', validateInputsRegister);
     password.addEventListener('input', validateInputsRegister);
+    user.addEventListener('input', validateInputsRegister);
+    firstName.addEventListener('input', validateInputsRegister);
+    lastName.addEventListener('input', validateInputsRegister);
+    birthday.addEventListener('input', validateInputsRegister);
+    country.addEventListener('input', validateInputsRegister);
 
     //crea y registra al usuario
     btnRegister.addEventListener('click', () => {
@@ -115,6 +130,3 @@ export const signInView = () => {
     });
 
 }
-
-
-

@@ -4,37 +4,37 @@ import { destinyContent } from '../view/destiny-view.js';
 
 export const destinyView = () => {
 
-    document.getElementById('body').style.background = 'transparent';
+    document.querySelector('#body').style.background = 'transparent';
 
     const destinyWall = document.createElement('div');
     destinyWall.setAttribute('id', 'contenedor');
     destinyWall.innerHTML = destinyContent;
-    document.getElementById('containerViews').appendChild(destinyWall);
+    document.querySelector('#containerViews').appendChild(destinyWall);
 
-    const goHome = document.getElementById('home');
+    const goHome = document.querySelector('#home');
     goHome.addEventListener('click', () => {
         pushState('#/wall');
     });
 
-    const back = document.getElementById('back');
+    const back = document.querySelector('#back');
     back.addEventListener('click', () => {
         pushState('#/wall');
     });
 
-    const goProfile = document.getElementById('profile');
+    const goProfile = document.querySelector('#profile');
     goProfile.addEventListener('click', () => {
         pushState('#/profile');
     });
 
-    const menu = document.getElementById('show-signout');
-    const signOutBar = document.getElementById('sign-out');
+    const menu = document.querySelector('#show-signout');
+    const signOutBar = document.querySelector('#sign-out');
     menu.addEventListener('click', () => {
         signOutBar.style.display = 'block';
     });
 
     signOutBar.addEventListener('click', () => {
         signOut();
-        const body = document.getElementById('body');
+        const body = document.querySelector('#body');
         const screen = window.matchMedia('(min-width: 700px)');
         const showWallDesktop = () => {
             const myMedia = (screenSize) => {

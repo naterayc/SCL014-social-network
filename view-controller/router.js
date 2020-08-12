@@ -13,7 +13,7 @@ export const changeRoute = (hash) => {
 // Renderiza vistas en función del hash que ejecuta la funcion pushState
 const showViews = (hash) => {
 
-    const viewsContainer = document.getElementById('containerViews');
+    const viewsContainer = document.querySelector('#containerViews');
     viewsContainer.innerHTML = '';
 
     switch (hash) {

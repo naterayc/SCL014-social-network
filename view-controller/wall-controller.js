@@ -12,12 +12,12 @@ import { postPlantilla } from "../view/post-content-view.js";
 
 export const wallView = () => {
 
-    document.getElementById('body').style.background = 'transparent';
+    document.querySelector('#body').style.background = 'transparent';
 
     const wall = document.createElement('div');
     wall.setAttribute('id', 'contenedor');
     wall.innerHTML = wallContent;
-    document.getElementById('containerViews').appendChild(wall);
+    document.querySelector('#containerViews').appendChild(wall);
 
     const container = document.querySelector('#container-post');
 
@@ -64,15 +64,15 @@ export const wallView = () => {
         pushState('#/destiny');
     });
 
-    const menu = document.getElementById('show-signout');
-    const signOutBar = document.getElementById('sign-out');
+    const menu = document.querySelector('#show-signout');
+    const signOutBar = document.querySelector('#sign-out');
     menu.addEventListener('click', () => {
         signOutBar.classList.remove('hide');
     });
 
     signOutBar.addEventListener('click', () => {
         signOut();
-        const body = document.getElementById('body');
+        const body = document.querySelector('#body');
         const screen = window.matchMedia('(min-width: 700px)');        
         const showWallDesktop = () => {
             const myMedia = (screenSize) => {
@@ -96,13 +96,13 @@ export const wallView = () => {
         showWallDesktop();
     });
 
-    const goTop = document.getElementById('home');
+    const goTop = document.querySelector('#home');
     goTop.addEventListener('click', () => {
         const header = document.querySelector('#header');
         header.scrollIntoView({ behavior: 'smooth' });
     });
 
-    const goProfile = document.getElementById('profile');
+    const goProfile = document.querySelector('#profile');
     goProfile.addEventListener('click', () => {
         pushState('#/profile');
     });
@@ -183,11 +183,3 @@ const renderPublish = (arrayPublish, container) => {
         container.appendChild(divPost);
     });
 };
-
-
-
-
-
-
-
-
