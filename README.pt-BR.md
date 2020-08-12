@@ -28,6 +28,8 @@ Según un estudio realizado por Booking .com y realizado de forma independiente 
    -Al 60% de los viajeros globales les gustaría tener acceso a un servicio (app/web) que les recomendase destinos en los que un aumento del turismo tendría un impacto positivo en la comunidad local.
    -El 59% de las personas quiere que la tecnología les proponga opciones que les sorprendan con algo totalmente nuevo.
 
+Cualquier usuario se convierte en fuente de inspiración para otros: según Hosteltur, más del 92% de los viajeros sienten el impulso de compartir sus experiencias en redes sociales. Por la autenticidad del contenido  compartido, los usuarios no sólo  deciden dónde  será su próximo  viaje sino que  también  buscan alojamiento,  actividades, o restaurantes donde disfrutar de su estancia.
+
 Para el proceso de research UX que nos permitió identificar a los potenciales usuarios de una red social para viajeros, se realizaron encuestas utilizando la herramienta Google Forms, y además nos encontramos con una problemática común en ellos.
 
 [Enlace al Form](https://docs.google.com/forms/d/e/1FAIpQLSdHeU1JGJorLCty8IiqriveXfOzHl2MXzyWTxr3jzzxWIE6Zw/viewform?usp=sf_link)
@@ -38,11 +40,13 @@ Los usuarios, son el adulto contemporáneo con un rango etario definido entre lo
 
   ![Perfil de usuario](src/img/readme/perfil-de-usuario.png)
 
-Estos a su vez, utilizan frecuentemente redes sociales, como Instagram y Facebook para compartir sus experiencias con familiares y amigos, dicha interacción se basa únicamente en postear fotos siempre y cuando la experiencia haya sido buena, y raramente llegando a interactuar con personas fuera de su círculo social que puedan interesarse en conocer experiencias de viaje y compartir las suyas mismas.
+Estos a su vez, utilizan  frecuentemente redes sociales, como  Instagram y Facebook  para subir fotos mientras están de vacaciones y  continúa  haciéndolo a  su vuelta  a fin de  compartir sus  experiencias  con familiares  y amigos, dicha interacción se basa únicamente en postear fotos siempre y cuando la experiencia haya sido buena, y raramente llegando a interactuar con personas fuera de su círculo social que puedan interesarse en conocer experiencias de viaje y compartir las suyas mismas.
 
 ### 2.2 Problemática y solución
 
-Tomando en cuenta la necesidad de los usuarios de compartir sus experiencias de viaje, surge Nómada un espacio para compartir e interactuar con otros que viajen frecuentemente, donde no simplemente se muestre una imagen bonita como reseña de algún viaje, sino que pueda ser un espacio seguro para compartir las experiencias de viaje, aún si estas sean  buenas o no tan buenas, ayudando de esta forma a otros viajeros al momento de planificar sus viajes y así fomentar las relaciones e interacciones entre los usuarios, llegando a crear una comunidad.
+Tomando en cuenta la necesidad  de los usuarios  de compartir  sus experiencias de  viaje, surge Nómada un espacio para compartir e  interactuar con otros  que viajen frecuentemente, donde  no simplemente  se muestre una imagen bonita como reseña de algún viaje, sino que pueda ser un espacio seguro para compartir las experiencias de viaje, aún si estas sean  buenas o no tan buenas, ayudando de esta forma a otros viajeros al momento de planificar sus viajes y así fomentar las relaciones e interacciones entre los usuarios, llegando a crear una comunidad.
+
+Una Aplicacion  como Nómada supone  también una gran  oportunidad para  las compañías de viajes,  aerolíneas  y cadenas hoteleras. A  través de  los likes, intereses  e interacciones de los usuarios,  las marcas dedicadas al turismo pueden reconocer qué destinos son los que más interesan, de forma que puedan crean promociones personalizadas para cada uno de ellos.
 
 ### 2.3 Historias de usuario
 
@@ -66,7 +70,8 @@ Antes de comenzar el proceso de pototipado se definieron premisas importantes pa
 
     1.Tiene que ser limpia y agradable a la vista.
     2.Debe ser sencilla.
-    3.Debe poder utilizarse rápidamente sin la necesidad de realizar muchos pasos para cargar o editar alguna publicación.
+    3.Debe poder utilizarse rápidamente sin la necesidad de realizar muchos pasos para cargar o editar 
+      alguna publicación.
     4.Debe ser intuitiva.
 
   ![sketch](src/img/readme/prototipo-de-baja.png)

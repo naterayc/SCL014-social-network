@@ -6,10 +6,10 @@ ${ header}
 
 <section class= "container-left">
     <section id="info-viajero">
-        <img src="img/islandia.jpg" alt="Foto perfil" class="img-profile">
+        <img src="img/viajera3.jpg" alt="Foto perfil" class="img-profile">
         <div id="datos-viajero">
             <p class="user-name"> Viajera frecuente </p>
-            <p class="user-info"> Me gusta la naturaleza y el sonido del mar</p>
+            <p class="user-info"> Me gusta la naturaleza y el sonido del mar.</p>
             <br><span class="user-info"><i class="fas fa-map-marker-alt"></i> Santiago de Chile</span>
         </div>
     </section>
@@ -33,9 +33,9 @@ ${ header}
     <section id="freinds">
         <h2> Mis Amigos </h2>
         <div id="mostrar-amigos">
-            <img src="img/costa-rica.jpg" id="picture-myfreinds" alt="Foto perfil">
-            <img src="img/colombia.jpg" id="picture-myfreinds" alt="Foto perfil">
-            <img src="img/brasil.jpg" id="picture-myfreinds" alt="Foto perfil">
+            <img src="img/camp2.jpg" id="picture-myfreinds" alt="Foto perfil">
+            <img src="img/viajera-frecuente.jpg" id="picture-myfreinds" alt="Foto perfil">
+            <img src="img/viajera-frecuente2.jpg" id="picture-myfreinds" alt="Foto perfil"> 
         </div>
     </section>
     <section id= "container-mypost">
@@ -48,7 +48,7 @@ ${ header}
 <section id="wall">
     <div class="public">
         <div class="flex">
-            <img id="user-photo" src="img/islandia.jpg" class="profile-picture">
+            <img id="user-photo" src="img/viajera3.jpg" class="profile-picture">
             <input id="post-title" class="inputpublic" type="text" placeholder="¿Que quieres compartir?"/>
         </div>
         <div id="load">

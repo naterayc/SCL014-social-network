@@ -2,11 +2,13 @@ import { footer } from "./footer-view.js";
 import { mypostPlantilla } from "./mypost-content-view.js"
 
 const profileContent = `
+<div id="header" class="head">
+</div>
 <section id="info-viajero">
-    <img src="img/islandia.jpg" alt="Foto perfil" class="img-profile">     
+    <img src="img/viajera3.jpg" alt="Foto perfil" class="img-profile">     
     <div id="datos-viajero">
         <p class="user-name"> Viajera frecuente </p>
-        <p class="user-info"> Me gusta la naturaleza y el sonido del mar </p>
+        <p class="user-info"> Me gusta la naturaleza y el sonido del mar.</p>
         <span class="user-info"><i class="fas fa-map-marker-alt"></i> Santiago de Chile</span>
     </div>
 </section>
@@ -34,17 +36,16 @@ const profileContent = `
 <section id="freinds">
     <h2> Mis Amigos </h2>
     <div id="mostrar-amigos">  
-        <img src="img/costa-rica.jpg" id="picture-myfreinds" alt="Foto perfil">
-        <img src="img/colombia.jpg" id="picture-myfreinds" alt="Foto perfil">
-        <img src="img/brasil.jpg" id="picture-myfreinds" alt="Foto perfil">   
+        <img src="img/camp2.jpg" id="picture-myfreinds" alt="Foto perfil">
+        <img src="img/viajera-frecuente.jpg" id="picture-myfreinds" alt="Foto perfil">
+        <img src="img/viajera-frecuente2.jpg" id="picture-myfreinds" alt="Foto perfil">   
     </div> 
 </section>
 
 <section id= "container-mypost">
     <h2> Mis Post </h2>
     <div id="boxmypost">
-        ${ mypostPlantilla } 
-        ${ mypostPlantilla }         
+        ${ mypostPlantilla }               
     </div>
 </section>
 ${ footer }

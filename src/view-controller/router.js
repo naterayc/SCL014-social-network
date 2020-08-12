@@ -1,7 +1,7 @@
-import { signInView } from '../view/sign-in-controller.js';
-import { wallView } from '../view/wall-controller.js';
-import { destinyView } from '../view/destiny-controller.js';
-import { profileView } from '../view/profile-controller.js';
+import { signInView } from './sign-in-controller.js';
+import { wallView } from './wall-controller.js';
+import { destinyView } from './destiny-controller.js';
+import { profileView } from './profile-controller.js';
 
 export const changeRoute = (hash) => {
     if (hash === '' || localStorage.getItem('user') === null) {
