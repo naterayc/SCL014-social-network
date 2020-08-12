@@ -3,14 +3,14 @@ import { profileContent } from '../view/profile-view.js';
 
 export const profileView = () => {
 
-    document.getElementById('body').style.background = 'transparent';
+    document.querySelector('#body').style.background = 'transparent';
     // Renderiza profileView en la App.
     const profileWall = document.createElement('div');
     profileWall.setAttribute('id', 'contenedor');
     profileWall.innerHTML = profileContent;
-    document.getElementById('containerViews').appendChild(profileWall);
+    document.querySelector('#containerViews').appendChild(profileWall);
     
-    const goHome = document.getElementById('home');
+    const goHome = document.querySelector('#home');
     goHome.addEventListener('click', () => {
         pushState('#/wall')
     }); 

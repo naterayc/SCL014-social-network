@@ -9,9 +9,27 @@ const validator = (signInEmailValue, signInPasswordValue) => {
 };
 
 //valida que los inputs de registro no esten vacios y contengan valores validos
-const validatorRegister = (emailRegisterValue, passwordRegisterValue, emailRegisterValid, passwordRegisterValid) => {
+const validatorRegister = (
+    emailRegisterValue,
+    passwordRegisterValue,
+    user,
+    fname,
+    lname,
+    birth,
+    country,
+    emailRegisterValid,
+    passwordRegisterValid
+) => {
 
-    if (emailRegisterValue === '' || passwordRegisterValue === '') {
+    if (
+        emailRegisterValue === '' ||
+        passwordRegisterValue === '' ||
+        user === '' ||
+        fname === '' ||
+        lname === '' ||
+        birth === '' ||
+        country === ''
+    ) {
         return true;
     }
     if (emailRegisterValid && passwordRegisterValid) {
