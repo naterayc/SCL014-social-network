@@ -74,11 +74,11 @@ Antes de comenzar el proceso de pototipado se definieron premisas importantes pa
       alguna publicación.
     4.Debe ser intuitiva.
 
-  ![sketch](src/img/readme/prototipo-de-baja.png)
+  ![protipo de baja fidelidad](src/img/readme/prototipo-de-baja.png)
 
-De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva para el usuario y que de esa forma la experiencia de usuario fuese más amigable. Se realizaron las iteraciones necesarias y posteriormente se definieron tipografías a utilizar, paleta de colores y se diseño el logo de la aplicación. Para luego da paso a la maquetación en Figma, obteniendo así el prototipo de alta fidelidad.
+De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva para el usuario y que de esa forma la experiencia de usuario fuese más amigable. Se realizaron las iteraciones necesarias y posteriormente se definieron tipografías a utilizar, paleta de colores y se diseñó el logo de la aplicación. Para luego dar paso a la maquetación en Figma, obteniendo así el prototipo de alta fidelidad.
 
-  Las tipografías utilizadas son del tipo Sans Serif, para no causar distracción al usuario se utiliza la misma tipografía en toda la aplicación.
+  Las tipografías utilizadas son del tipo Sans Serif, para no causar distracción al usuario se utiliza la misma tipografía en todos los textos de la aplicación.
 
   ![tipografias](src/img/readme/Tipografias.png)
 
