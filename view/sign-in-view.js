@@ -45,8 +45,8 @@ const viewSignIn = `
                                 <input type="email" id="email-register" placeholder="Correo electrónico" autocomplete="email" required><br><br>
                                 <input type="password" id="password-register" placeholder="Contraseña" autocomplete="current-password" required><br><br>
                             </fieldset>
-                            <div id="weak-password" class="hide"><span>La contraseña es muy débil. Debe contener al menos 6 caracteres.</span></div>
-                            <div id="activa-registro" class="hide"><span>Ve a tu correo para activar cuenta</span></div>
+                            <div id="weak-password" class="msg-register hide"><span>La contraseña es muy débil. Debe contener al menos 6 caracteres.</span></div>
+                            <div id="activa-registro" class="msg-register hide"><span>Ve a tu correo para activar cuenta</span></div>
                         </form>
                     </section>
                     <button id="btn-register" type="button" class="disabled" disabled="true">Registrar</button>

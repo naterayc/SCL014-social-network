@@ -52,15 +52,16 @@ input {
     font-family: 'Roboto';
     color: #ffffff;
 }
-#weak-password {
+.msg-register {
     width: 70%;
     margin:auto;
     padding: .8rem 0 .3rem 0;
 }
-#weak-password>span {
+.msg-register>span {
     font-family: 'Roboto';
     align-items: center;
 }
+
 
 /*titulos*/
 
