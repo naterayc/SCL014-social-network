@@ -50,7 +50,7 @@ export const wallView = () => {
         const postText = document.querySelector('#post-title').value;
         const postImg = photo;
         const date = new Date().toLocaleString();
-        const user = JSON.parse(localStorage.getItem('user'));        
+        const user = JSON.parse(localStorage.getItem('user'));
         savePublish({
             postText: postText,
             postImg: postImg,
@@ -114,7 +114,7 @@ export const wallView = () => {
 
     const getPublishPrint = () => {
         container.innerHTML = '';
-        obtenerPublish().then((arrayPublish) => {            
+        obtenerPublish().then((arrayPublish) => {
             if (arrayPublish.empty === true) {
                 renderEmptyPublish(container);
             } else {
@@ -124,6 +124,23 @@ export const wallView = () => {
                     const parentDiv = icon.parentElement.parentElement;
                     icon.addEventListener('click', () => {
                         parentDiv.querySelector('.edit-post').style.display = "flex";
+                    });
+                    parentDiv.querySelector('[data-id="edit-post"]').addEventListener('click', () => {
+                        console.log('edit');
+                        parentDiv.querySelector('[data-id="div-edit-post"]').classList.remove('hide');
+                        parentDiv.querySelector('[data-id="text-post-edited"]').classList.add('hide');
+                    });
+                    parentDiv.querySelector('[data-id="btn-save-input"]').addEventListener('click', () => {
+                        const inputEdit = parentDiv.querySelector('[data-id="post-text-edit"]').value;
+                        updateDoc(parentDiv.dataset.id, {
+                            postText: inputEdit
+                        }).then(() => {
+                            //buscar elemento a actualizar del html
+                            parentDiv.querySelector('[data-id="text-post-edited"]').innerHTML = inputEdit;
+                            parentDiv.querySelector('[data-id="div-edit-post"]').classList.add('hide');
+                            parentDiv.querySelector('[data-id="text-post-edited"]').classList.remove('hide');
+                        });
+
                     });
                     parentDiv.querySelector('.delete-option').addEventListener('click', () => {
                         deletePublish(parentDiv.dataset.id)
@@ -176,7 +193,7 @@ export const wallView = () => {
 //pinta los post en pantalla
 const renderPublish = (arrayPublish, container) => {
     arrayPublish.forEach(doc => {
-        const data = doc.data();        
+        const data = doc.data();
         const postRender = postPlantilla(
             doc.id,
             data.postImg,

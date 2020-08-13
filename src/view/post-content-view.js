@@ -4,7 +4,7 @@ const postPlantilla = (docId, image, comments, likes, photo, text, date) =>  `
             <i class="fas fa-ellipsis-h icon show-options"></i>
          </div>
         <div class="edit-post">
-            <span><i class="far fa-edit icon"></i>Editar</span>
+            <span data-id="edit-post"><i class="far fa-edit icon"></i>Editar</span>
             <span><i class="fas fa-trash-alt icon delete-option"></i>Eliminar</span>
         </div>
         <!-- <p>Madrid</p> -->
@@ -18,9 +18,13 @@ const postPlantilla = (docId, image, comments, likes, photo, text, date) =>  `
         </div>
         <div>
             <img src="${ photo }" id="picture-perfil-post" alt="Foto perfil">  
-            <h4>${ text }</h4>
+            <h4 data-id="text-post-edited">${ text }</h4>
+            <div data-id="div-edit-post" class="hide">
+                <input data-id="post-text-edit" class="inputpublic" type="text" value="${ text }"/>
+                <button data-id="btn-save-input">GUARDAR</button>
+            </div>
             <div>
-            <p>${ date }</p>
+                <p>${ date }</p>
             </div>
         </div>
         
