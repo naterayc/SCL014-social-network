@@ -56,6 +56,8 @@ export const wallView = () => {
             postImg: postImg,
             date: date,
             likes: [],
+            userName: user.name, 
+            userEmail: user.email,
             userUid: user.uid,
             userPhoto: user.photo
         }).then(() => {
@@ -201,6 +203,7 @@ const renderPublish = (arrayPublish, container) => {
             data.likes.length,
             data.userPhoto ? data.userPhoto : 'img/viajera3.jpg',
             data.postText,
+            data.userName ? data.userName : data.userEmail,
             data.date
         );
         const divPost = document.createElement('div');
