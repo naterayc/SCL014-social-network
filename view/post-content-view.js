@@ -1,13 +1,8 @@
-const postPlantilla = (docId, image, comments, likes, photo, text, name, date) => `
+
+const postPlantilla = (docId, edit, image, comments, likes, photo, text, name, date) => `
 <div id="post-note" data-id="${ docId}">
-        <div>
-            <i class="fas fa-ellipsis-h icon show-options"></i>
-         </div>
-        <div class="edit-post">
-            <span data-id="edit-post"><i class="far fa-edit icon"></i>Editar</span>
-            <span><i class="fas fa-trash-alt icon delete-option"></i>Eliminar</span>
-        </div>
-        <!-- <p>Madrid</p> -->
+        ${ edit }
+        
         <div> 
             <img id= "image-load" src="${ image}"  alt="Foto post" class="img-cuadrada">        
         </div>

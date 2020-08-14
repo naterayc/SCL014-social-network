@@ -10,6 +10,7 @@ import {
 } from '../lib/firebase/firebase-firestore.js';
 import { postPlantilla } from "../view/post-content-view.js";
 import { postEmptyPlantilla } from "../view/post-empty-view.js"
+import { editOptions } from '../view/edit-view.js';
 
 export const wallView = () => {
 
@@ -120,7 +121,7 @@ export const wallView = () => {
         obtenerPublish().then((arrayPublish) => {
             if (arrayPublish.empty === true) {
                 renderEmptyPublish(container);
-            } else {
+            }else {
                 renderPublish(arrayPublish, container);
                 const editor = container.querySelectorAll('.show-options');
                 editor.forEach(icon => {
@@ -195,10 +196,12 @@ export const wallView = () => {
 }
 //pinta los post en pantalla
 const renderPublish = (arrayPublish, container) => {
+    const user = JSON.parse(localStorage.getItem('user'));
     arrayPublish.forEach(doc => {
         const data = doc.data();
         const postRender = postPlantilla(
             doc.id,
+            data.userUid === user.uid ? editOptions: '',
             data.postImg,
             0,
             data.likes.length,
