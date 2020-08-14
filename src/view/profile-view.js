@@ -1,15 +1,15 @@
 import { footer } from "./footer-view.js";
 import { mypostPlantilla } from "./mypost-content-view.js"
 
-const profileContent = `
+const profileContent = (profilePhoto, name, location) => `
 <div id="header" class="head">
 </div>
 <section id="info-viajero">
-    <img src="img/viajera3.jpg" alt="Foto perfil" class="img-profile">     
+    <img src="${ profilePhoto }" alt="Foto perfil" class="img-profile">     
     <div id="datos-viajero">
-        <p class="user-name"> Viajera frecuente </p>
+        <p class="user-name"> ${ name }</p>
         <p class="user-info"> Me gusta la naturaleza y el sonido del mar.</p>
-        <span class="user-info"><i class="fas fa-map-marker-alt"></i> Santiago de Chile</span>
+        <span class="user-info"><i class="fas fa-map-marker-alt"></i> ${ location }</span>
     </div>
 </section>
 
