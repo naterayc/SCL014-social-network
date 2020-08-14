@@ -61,6 +61,7 @@ export const wallView = () => {
             userUid: user.uid,
             userPhoto: user.photo
         }).then(() => {
+            document.querySelector('#post-title').value = "";
             getPublishPrint();
         });
     });
