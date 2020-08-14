@@ -130,7 +130,6 @@ export const wallView = () => {
                         parentDiv.querySelector('.edit-post').style.display = "flex";
                     });
                     parentDiv.querySelector('[data-id="edit-post"]').addEventListener('click', () => {
-                        console.log('edit');
                         parentDiv.querySelector('[data-id="div-edit-post"]').classList.remove('hide');
                         parentDiv.querySelector('[data-id="text-post-edited"]').classList.add('hide');
                     });
@@ -146,15 +145,25 @@ export const wallView = () => {
                         });
 
                     });
+                    
+                    //eliminar post
                     parentDiv.querySelector('.delete-option').addEventListener('click', () => {
-                        deletePublish(parentDiv.dataset.id)
-                            .then(() => {
-                                getPublishPrint();
-                            })
+                        parentDiv.querySelector('.modal').classList.remove('hide');
                     });
+                    
+                    document.querySelector('#delete').addEventListener('click', () => {
+                        deletePublish(parentDiv.dataset.id)
+                        .then(() => {
+                            parentDiv.querySelector('.modal').classList.add('hide');
+                            getPublishPrint();
+                        })
+                    });
+                    document.querySelector('#close-delete').addEventListener('click', () => { 
+                        parentDiv.querySelector('.modal').classList.add('hide');
+                    });   
+                    
                     // evento para dar like a los post
                     parentDiv.querySelector('[data-id="likesNumber"]').addEventListener('click', () => {
-                        console.log('likes');
                         getDoc(parentDiv.dataset.id)
                             .then((doc) => {
                                 const user = JSON.parse(localStorage.getItem('user'));

@@ -72,7 +72,13 @@ h2 {
     margin: 0.5rem 0 0.5rem 1rem;
     font-size: 0.9rem;
 }
-
+h3 {
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin: 0.5rem 0 0.5rem 1rem;
+    font-size: 1rem; 
+}
 h4 {
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -498,6 +504,17 @@ button {
     font-family: 'roboto';
     font-size: 1rem;
     margin: auto 0 auto 2%;
+}
+.delete-btn {
+    width: 35%;
+    height: 28px;
+    background: #2979FF;
+    border-radius: 10px;
+    border: transparent;
+    color: #ffff;
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin: auto auto auto 10%;
 }
 
 /*destinos destacados */
