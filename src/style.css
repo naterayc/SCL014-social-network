@@ -432,29 +432,28 @@ button {
 #post-note div {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     margin: auto;
-    padding: .3rem .1rem .1rem .1rem; 
+    padding: .3rem .1rem 0 .1rem; 
 }
 
 #post-note div>i{
     margin:0 5% 0 0 ;
 }
 
-#post-note div>h4{
+.post-text {
     font-family: 'Roboto';
-    margin: 1.3rem auto .2rem auto;
+    margin: auto auto auto 0;
     font-size: .9rem;
     color: #4F4F4F;
-    text-align:left ;
-    font-weight: 200;
-    line-height: 0;    
+    text-align:left ;  
 }
 
-#post-note div>p{
+.date {
     font-family: 'roboto';
     font-size: .8rem;
     text-align: right;
-    margin: 2rem 0 0 0;
+    margin: 0 .3rem 0 0;
     color: #4F4F4F;
 }
 
@@ -477,10 +476,29 @@ button {
     height: 2.4rem;
     border-radius: 50%;
     border: solid #ffff 2px;
-    margin: 0 auto .2rem 5%;
+    margin: 0 2% .2rem 5%;
     display: flex;
 }
-
+.edit-input{
+    border: solid 1.5px #ffffff;
+    border-radius: 8px;
+    width: 90%;
+    margin: auto 0 auto 0;
+    text-align: center;
+    padding: .5rem;
+    color: #4F4F4F;
+}
+.save-btn {
+    width: 13%;
+    height: 28px;
+    background: #2979FF;
+    border-radius: 10px;
+    border: transparent;
+    color: #ffff;
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin: auto 0 auto 2%;
+}
 
 /*destinos destacados */
 #contenedor {
