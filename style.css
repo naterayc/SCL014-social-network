@@ -168,7 +168,7 @@ a {
     align-items: center;
     width:35%;
     margin-left:auto;
-    padding: .8rem;
+    padding: .3rem;
 }
 .signout>span {
     font-family: 'roboto';
@@ -265,7 +265,7 @@ input[type="file"] {
 .logo {
     margin-right: 40%;
     width: 35%;
-    height: auto;
+    height: 25px;
 }
 
 
@@ -718,6 +718,22 @@ button {
     display : none;
 }
 
+.modal-edit{   
+    background-color: #FEFEFE;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}
+.edit-profile>span {
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin:auto 0 auto 0;
+    color:#4F4F4F;
+}
 /* Desktop */
 @media screen and (min-width: 700px) and (max-width: 1600px) {
         .body {
@@ -806,6 +822,14 @@ button {
             height: auto;
             margin: 6% 5% 4% 65%;    
         }
+        .modal-edit{   
+            background-color: #FEFEFE;
+            margin: auto auto auto 29.5%;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            width: 30%;
+            height: auto;            
+        }
         fieldset {
             background-color: #EDEDED;
             border-radius: 1rem;
@@ -824,9 +848,9 @@ button {
             font-size: 28px;
             font-weight: bold;
         }
-        .logo {
-            margin: auto;
-            width: 15%;
+        .logo {            
+            margin: auto auto auto 0; 
+            width: 13%;
             height: auto;
         }
         .close-modal:hover,
@@ -847,9 +871,9 @@ button {
         }
         #wall {
             width: 38%;
-            margin: 5% auto auto auto;
+            margin: 0% auto auto auto;
             position: fixed;
-            left: 30%;
+            left: 25%;
         }
         .public {       
             width: 90%;
@@ -858,14 +882,12 @@ button {
         }
         #container-post {
             width: 40%;
-            margin: 13% auto 1% 30%;
-            max-height: 480px;
+            margin: 7% auto 1% 25%;
+            max-height: 580px;
             display: inline-grid;
-            scroll-snap-align: end;          
-            /*height: 520px;*/        
+            scroll-snap-align: end;    
             scroll-padding-top: 5%;
-            padding: 0;        
-            /*padding: 0.5rem 8rem 0.5rem 8rem;*/
+            padding: 0;
         }
         #post-note{
             border-radius: 7px;
@@ -873,24 +895,24 @@ button {
         #post-note div {        
             padding: .3rem 0rem 0rem 0rem; 
         }
-        .container-left {
+        /*.container-left {
             display: inline-grid;
             width: 27%;
             margin: 1% auto auto auto;
             left: 0;
             position: fixed;
             padding-left: .5rem;
-        }
+        }*/
         .container-right {
             display: inline-grid;
             width: 27%;
-            margin: 1% auto auto auto;
+            margin: 1% auto 1% auto;
             position: fixed;
-            right: 0;
+            right: 5%           
         }
-        /* barra inferior */
+        /* barra inferior*/
         #barra {
-        display: block;
+        display: none;
         width: 100%;
         background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
         transform: rotate(180deg);
@@ -907,7 +929,7 @@ button {
             align-items: flex-end;
             width: 12%;
             margin-left: auto;
-            padding: .1rem;
+            padding: .2rem;
         }
         .button2 {       
             margin: 0 auto auto auto;
@@ -922,7 +944,7 @@ button {
         #destinos{
             display: inline-block;
             flex-direction: column;
-            height: 440px;
+            height: 490px;
             overflow-y: scroll;
             scroll-padding-top: 10%;
             scroll-snap-align: start;
@@ -938,13 +960,11 @@ button {
         #info-viajero{
             display: block;
         }
-       
         .img-cuadrada{            
             border-radius: 7px;
             width: 90%;
             max-height: 360px;
             object-fit: cover;
-            
         }
         .user-name {            
             font-size: 1.2rem;           
@@ -994,4 +1014,4 @@ button {
             margin: 0.8rem 0 0.8rem 1rem;
             font-size: 1rem;
         }
-    }
+}

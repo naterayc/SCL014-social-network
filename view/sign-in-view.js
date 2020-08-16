@@ -24,7 +24,7 @@ const viewSignIn = `
             <span class="close-modal">&times;</span>
             <section class="modal-content">
                 <section>
-                    <img src="img/islandia.jpg" id="picture-perfil-register" alt="Foto perfil" class="imgRedonda">
+                    <img src="img/viaje.png" id="picture-perfil-register" alt="Foto perfil" class="imgRedonda">
                 </section>
                 <section>
                     <form>

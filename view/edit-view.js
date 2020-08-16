@@ -8,7 +8,7 @@ export const editOptions = `
     </div>
  
  <div id="detele-modal" class="modal hide">
-    <section class="modal-content">
+    <section class="modal-edit">
         <h3> ¿Realmente quieres eliminar esta publicación? </h3>
         <div style="display:flex">
         <button id="delete" class="delete-btn"> <!-- <i class="fas fa-trash-alt"> </i> --> Eliminar</button>

@@ -5,50 +5,14 @@ const wallContent = `
 ${ header}
 
 <section class= "container-left">
-    <section id="info-viajero">
-        <img src="img/viajera3.jpg" alt="Foto perfil" class="img-profile">
-        <div id="datos-viajero">
-            <p class="user-name"> Viajera frecuente </p>
-            <p class="user-info"> Me gusta la naturaleza y el sonido del mar.</p>
-            <br><span class="user-info"><i class="fas fa-map-marker-alt"></i> Santiago de Chile</span>
-        </div>
-    </section>
-    <section id="icons-profile">
-        <div id="iconos">
-            <i class="fas fa-suitcase-rolling iconos-profile"></i>
-            <i class="fas fa-bed iconos-profile"></i> 
-            <i class="fas fa-taxi iconos-profile"></i> 
-            <i class="fas fa-utensils iconos-profile"></i> 
-            <i class="fas fa-hiking iconos-profile"></i> 
-        </div>
-    </section>
-    <section id="intereses">
-        <h2> Mis Intereses </h2>
-        <div id="boxdeinteres">
-            <p id="titulo-interes"> America </p>
-            <p id="titulo-interes"> Comida </p>
-            <p id="titulo-interes"> Naturaleza </p>
-        </div>
-    </section>
-    <section id="freinds">
-        <h2> Mis Amigos </h2>
-        <div id="mostrar-amigos">
-            <img src="img/camp2.jpg" id="picture-myfreinds" alt="Foto perfil">
-            <img src="img/viajera-frecuente.jpg" id="picture-myfreinds" alt="Foto perfil">
-            <img src="img/viajera-frecuente2.jpg" id="picture-myfreinds" alt="Foto perfil"> 
-        </div>
-    </section>
-    <section id= "container-mypost">
-        <div id="boxmypost">
-        </div>
-    </section>
+    
 </section>
 
 <!-- post -->
 <section id="wall">
     <div class="public">
         <div class="flex">
-            <img id="user-photo" src="img/viajera3.jpg" class="profile-picture">
+            <img id="user-photo" src="img/viaje.png" class="profile-picture">
             <input id="post-title" class="inputpublic" type="text" placeholder="¿Que quieres compartir?"/>
         </div>
         <div id="load">

@@ -10,7 +10,9 @@ import {
 } from './input-validator.js';
 import { viewSignIn } from '../view/sign-in-view.js';
 
-import { registerUser } from '../lib/firebase/firebase-firestore.js';
+import { registerUser, getUserByEmail } from '../lib/firebase/firebase-firestore.js';
+
+import { pushState } from './router.js';
 
 
 export const signInView = () => {
@@ -24,7 +26,32 @@ export const signInView = () => {
     const signInWithGoogle = divSignIn.querySelector('#signInGoogle');
     // iniciar sesion con google
     signInWithGoogle.addEventListener('click', () => {
-        authGoogle();
+        authGoogle()
+            .then((user) => {
+                // Guardamos la informacion del usuario en el local storage
+                localStorage.setItem('user', JSON.stringify({
+                    name: user.displayName,
+                    email: user.email,
+                    photo: user.photoURL,
+                    uid: user.uid,
+                }));
+                getUserByEmail(user.email)
+                .then((userFound) => {
+                    console.log(userFound);
+                    if(userFound === undefined){
+                        registerUser({
+                            user: user.displayName,
+                            firstName: '',
+                            lastName: '',
+                            birthday: '',
+                            country: '',
+                            email: user.email,
+                        })
+                    }
+                    pushState('#/wall');
+                })                
+                
+            })
     });
     // evento para validar
     const validateEmailAndPassword = () => {
@@ -94,7 +121,7 @@ export const signInView = () => {
             firstName.value,
             lastName.value,
             birthday.value,
-            country.value, 
+            country.value,
             emailValid,
             passwordValid,
         );
@@ -126,6 +153,7 @@ export const signInView = () => {
             lastName: lastName.value,
             birthday: birthday.value,
             country: country.value,
+            email: email.value,
         })
     });
 
