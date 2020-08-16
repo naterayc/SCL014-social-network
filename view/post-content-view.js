@@ -1,6 +1,6 @@
 
 const postPlantilla = (docId, edit, image, comments, likes, photo, text, name, date) => `
-<div id="post-note" data-id="${ docId}">
+<div id="post-note" data-id="${ docId}" data-name="postContent">
         ${ edit }
         
         <div> 

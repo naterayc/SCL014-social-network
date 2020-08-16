@@ -57,7 +57,7 @@ export const wallView = () => {
             postImg: postImg,
             date: date,
             likes: [],
-            userName: user.name, 
+            userName: user.name,
             userEmail: user.email,
             userUid: user.uid,
             userPhoto: user.photo
@@ -121,48 +121,52 @@ export const wallView = () => {
         obtenerPublish().then((arrayPublish) => {
             if (arrayPublish.empty === true) {
                 renderEmptyPublish(container);
-            }else {
+            } else {
                 renderPublish(arrayPublish, container);
-                const editor = container.querySelectorAll('.show-options');
-                editor.forEach(icon => {
-                    const parentDiv = icon.parentElement.parentElement;
-                    icon.addEventListener('click', () => {
-                        parentDiv.querySelector('.edit-post').style.display = "flex";
-                    });
-                    parentDiv.querySelector('[data-id="edit-post"]').addEventListener('click', () => {
-                        parentDiv.querySelector('[data-id="div-edit-post"]').classList.remove('hide');
-                        parentDiv.querySelector('[data-id="text-post-edited"]').classList.add('hide');
-                    });
-                    parentDiv.querySelector('[data-id="btn-save-input"]').addEventListener('click', () => {
-                        const inputEdit = parentDiv.querySelector('[data-id="post-text-edit"]').value;
-                        updateDoc(parentDiv.dataset.id, {
-                            postText: inputEdit
-                        }).then(() => {
-                            //buscar elemento a actualizar del html
-                            parentDiv.querySelector('[data-id="text-post-edited"]').innerHTML = inputEdit;
-                            parentDiv.querySelector('[data-id="div-edit-post"]').classList.add('hide');
-                            parentDiv.querySelector('[data-id="text-post-edited"]').classList.remove('hide');
+                const postContent = container.querySelectorAll('[data-name="postContent"]');
+                postContent.forEach(post => {
+                    const parentDiv = post;
+                    const showOptions = parentDiv.querySelector('.show-options');
+                    if (showOptions !== null) {
+                        showOptions.addEventListener('click', () => {
+                            parentDiv.querySelector('.edit-post').style.display = "flex";
                         });
 
-                    });
-                    
-                    //eliminar post
-                    parentDiv.querySelector('.delete-option').addEventListener('click', () => {
-                        parentDiv.querySelector('.modal').classList.remove('hide');
-                    });
-                    
-                    parentDiv.querySelector('#delete').addEventListener('click', () => {
-                        console.log(parentDiv.dataset.id);
-                        deletePublish(parentDiv.dataset.id)
-                        .then(() => {
-                            parentDiv.querySelector('.modal').classList.add('hide');
-                            getPublishPrint();
+
+                        parentDiv.querySelector('[data-id="edit-post"]').addEventListener('click', () => {
+                            parentDiv.querySelector('[data-id="div-edit-post"]').classList.remove('hide');
+                            parentDiv.querySelector('[data-id="text-post-edited"]').classList.add('hide');
                         });
-                    });
-                    parentDiv.querySelector('#close-delete').addEventListener('click', () => { 
-                        parentDiv.querySelector('.modal').classList.add('hide');
-                    });   
-                    
+                        parentDiv.querySelector('[data-id="btn-save-input"]').addEventListener('click', () => {
+                            const inputEdit = parentDiv.querySelector('[data-id="post-text-edit"]').value;
+                            updateDoc(parentDiv.dataset.id, {
+                                postText: inputEdit
+                            }).then(() => {
+                                //buscar elemento a actualizar del html
+                                parentDiv.querySelector('[data-id="text-post-edited"]').innerHTML = inputEdit;
+                                parentDiv.querySelector('[data-id="div-edit-post"]').classList.add('hide');
+                                parentDiv.querySelector('[data-id="text-post-edited"]').classList.remove('hide');
+                            });
+
+                        });
+
+                        //eliminar post
+                        parentDiv.querySelector('.delete-option').addEventListener('click', () => {
+                            parentDiv.querySelector('.modal').classList.remove('hide');
+                        });
+
+                        parentDiv.querySelector('#delete').addEventListener('click', () => {
+                            console.log(parentDiv.dataset.id);
+                            deletePublish(parentDiv.dataset.id)
+                                .then(() => {
+                                    parentDiv.querySelector('.modal').classList.add('hide');
+                                    getPublishPrint();
+                                });
+                        });
+                        parentDiv.querySelector('#close-delete').addEventListener('click', () => {
+                            parentDiv.querySelector('.modal').classList.add('hide');
+                        });
+                    }
                     // evento para dar like a los post
                     parentDiv.querySelector('[data-id="likesNumber"]').addEventListener('click', () => {
                         getDoc(parentDiv.dataset.id)
@@ -211,7 +215,7 @@ const renderPublish = (arrayPublish, container) => {
         const data = doc.data();
         const postRender = postPlantilla(
             doc.id,
-            data.userUid === user.uid ? editOptions: '',
+            data.userUid === user.uid ? editOptions : '',
             data.postImg,
             0,
             data.likes.length,
