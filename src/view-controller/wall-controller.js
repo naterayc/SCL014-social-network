@@ -151,14 +151,15 @@ export const wallView = () => {
                         parentDiv.querySelector('.modal').classList.remove('hide');
                     });
                     
-                    document.querySelector('#delete').addEventListener('click', () => {
+                    parentDiv.querySelector('#delete').addEventListener('click', () => {
+                        console.log(parentDiv.dataset.id);
                         deletePublish(parentDiv.dataset.id)
                         .then(() => {
                             parentDiv.querySelector('.modal').classList.add('hide');
                             getPublishPrint();
-                        })
+                        });
                     });
-                    document.querySelector('#close-delete').addEventListener('click', () => { 
+                    parentDiv.querySelector('#close-delete').addEventListener('click', () => { 
                         parentDiv.querySelector('.modal').classList.add('hide');
                     });   
                     
@@ -214,7 +215,7 @@ const renderPublish = (arrayPublish, container) => {
             data.postImg,
             0,
             data.likes.length,
-            data.userPhoto ? data.userPhoto : 'img/viajera3.jpg',
+            data.userPhoto ? data.userPhoto : 'img/viaje.png',
             data.postText,
             data.userName ? data.userName : data.userEmail,
             data.date
