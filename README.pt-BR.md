@@ -17,7 +17,12 @@ Conoce, descubre, comparte
 
 Nómada la aplicación web para viajeros y aventureros, donde podrás compartir tus experiencias de viaje y conectar con otros, fomentando la comunidad y el enriquecimiento cultural.
 
-        'Imagen final del proyecto'
+Imagen Final versión mobile
+![Final Mobile](src/img/readme/mobile.PNG)
+
+Imagen Final versión desktop
+![Final Desktop-A](src/img/readme/D-1.PNG)
+![Final Desktop-B](src/img/readme/D-2.PNG)
 
 ## 2. Investigación UX
 
@@ -90,7 +95,7 @@ De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva p
 
   ![logo](src/img/readme/logo.png)
 
-  prototipo de alta fidelidad en figma
+  [Prototipo de alta fidelidad en Figma](https://www.figma.com/file/RpuGwihRDhkzMamqWhO0CT/N%C3%B3mada?node-id=0%3A1)
   
 ## Desarrolladoras
 
