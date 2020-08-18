@@ -45,7 +45,7 @@ const profileContent = (profilePhoto, name, location) => `
 <section id= "container-mypost">
     <h2> Mis Post </h2>
     <div id="boxmypost">
-        ${ mypostPlantilla }               
+    <!--${ mypostPlantilla }-->            
     </div>
 </section>
 ${ footer }
