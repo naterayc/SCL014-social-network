@@ -87,13 +87,9 @@ Antes de comenzar el proceso de pototipado se definieron premisas importantes pa
 
 De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva para el usuario y que de esa forma la experiencia de usuario fuese más amigable. Se realizaron las iteraciones necesarias y posteriormente se definieron tipografías a utilizar, paleta de colores y se diseñó el logo de la aplicación. Para luego dar paso a la maquetación en Figma, obteniendo así el prototipo de alta fidelidad.
 
-  Las tipografías utilizadas son del tipo Sans Serif, para no causar distracción al usuario se utiliza la misma tipografía en todos los textos de la aplicación.
+  Las tipografías utilizadas son del tipo Sans Serif, para no causar distracción al usuario se utiliza la misma tipografía en todos los textos de la aplicación. La selección de colores se llevo a cabo pensando en brindar confianza y seguridad al usuario, por eso se seleccionó el color azul como base y se emplea en distintas intensidades, a su vez, este es represetativo del océano y el cielo.
 
-  ![tipografias](src/img/readme/Tipografias.png)
-
-  La selección de colores se llevo a cabo pensando en brindar confianza y seguridad al usuario, por eso se seleccionó el color azul como base y se emplea en distintas intensidades, a su vez, este es represetativo del océano y el cielo.
-
-  ![colores](src/img/readme/Colores.png)
+  ![tipografias](src/img/readme/Tipografias.png) ![colores](src/img/readme/Colores.png)
 
   El logo de la aplicación se diseño como un isologo, incluyendo una brújula dentro de la palabra Nómada reemplazando la letra o, de esta forma se concibe como un todo, y los elementos son complementarios de los otros. Se utilizó el naranja para el logotipo para crear contraste con la paleta de colores utilizada.
 
