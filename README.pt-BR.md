@@ -92,3 +92,8 @@ De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva p
 
   prototipo de alta fidelidad en figma
   
+## Desarrolladoras
+
+* [Amanda Diaz](https://github.com/adbarquitectura)
+* [Algris Marquez](https://github.com/AlgrisMarquez)
+* [Yndira Natera](https://github.com/naterayc)
