@@ -2,6 +2,8 @@ import { pushState } from './router.js'
 import { profileContent } from '../view/profile-view.js';
 import { getUserByEmail, getPublishByUid } from '../lib/firebase/firebase-firestore.js';
 import { mypostPlantilla } from '../view/mypost-content-view.js';
+import { postEmptyPlantilla } from '../view/post-empty-view.js';
+
 
 export const profileView = () => {
 
@@ -35,20 +37,21 @@ const renderProfile = () => {
 
 const renderProfileP = () => {
     const users = JSON.parse(localStorage.getItem('user'));
+    const containerProfilePost = document.querySelector('#boxmypost');
     getPublishByUid(users.uid)
         .then((coleccion) => {
-            coleccion.forEach((post, container) => {
+            if (coleccion === undefined) {
+                containerProfilePost.innerHTML = postEmptyPlantilla;
+            } else {
+            coleccion.forEach((post) => {
                 const data = post.data();
-                console.log('coleccion buscada');
                 const renderProfilePublish = mypostPlantilla(
                     data.postImg,
                     data.likes.length,
-                );
-                const containerProfilePost = document.querySelector('#boxmypost');
-                console.log(renderProfilePublish);
+                );    
                 containerProfilePost.innerHTML += renderProfilePublish;
-
             });
+        }
         })
 
 }
