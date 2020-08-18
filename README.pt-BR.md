@@ -17,10 +17,12 @@ Conoce, descubre, comparte
 
 Nómada la aplicación web para viajeros y aventureros, donde podrás compartir tus experiencias de viaje y conectar con otros, fomentando la comunidad y el enriquecimiento cultural.
 
-Imagen Final versión mobile
+### Imagen Final versión mobile
+
 ![Final Mobile](src/img/readme/mobile.PNG)
 
-Imagen Final versión desktop
+### Imagen Final versión desktop
+
 ![Final Desktop-A](src/img/readme/D-1.PNG)
 ![Final Desktop-B](src/img/readme/D-2.PNG)
 
@@ -79,7 +81,9 @@ Antes de comenzar el proceso de pototipado se definieron premisas importantes pa
       alguna publicación.
     4.Debe ser intuitiva.
 
-  ![protipo de baja fidelidad](src/img/readme/prototipo-de-baja.png)
+#### Prototipo de baja fidelidad
+
+  ![protipo de baja fidelidad](https://github.com/naterayc/SCL014-social-network/blob/master/src/img/readme/prototipo-de-baja.PNG?raw=true)
 
 De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva para el usuario y que de esa forma la experiencia de usuario fuese más amigable. Se realizaron las iteraciones necesarias y posteriormente se definieron tipografías a utilizar, paleta de colores y se diseñó el logo de la aplicación. Para luego dar paso a la maquetación en Figma, obteniendo así el prototipo de alta fidelidad.
 
