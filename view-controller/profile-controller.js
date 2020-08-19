@@ -5,7 +5,7 @@ import { mypostPlantilla } from '../view/mypost-content-view.js';
 import { postEmptyPlantilla } from '../view/post-empty-view.js';
 
 
-export const profileView = () => {
+const profileView = () => {
 
     renderProfile();
 
@@ -54,4 +54,8 @@ const renderProfileP = () => {
         }
         })
 
+}
+export{
+    profileView,
+    renderProfileP
 }

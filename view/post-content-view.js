@@ -4,7 +4,7 @@ const postPlantilla = (docId, edit, image, comments, likes, photo, text, name, d
         ${ edit }
         
         <div> 
-            <img id= "image-load" src="${ image}"  alt="Foto post" class="img-cuadrada">        
+            <img id="image-load" src="${image}" alt="Foto post" class="img-cuadrada">       
         </div>
         
         <div>              
