@@ -538,7 +538,27 @@ button {
     font-size: 1rem;
     margin: auto auto auto 10%;
 }
-
+.close-btn {
+    width: 35%;
+    height: 28px;
+    background: #2979FF;
+    border-radius: 10px;
+    border: transparent;
+    color: #ffff;
+    font-family: 'roboto';
+    font-size: 1rem;
+    margin: auto;
+}
+.modal-reminder{   
+    background-color: #FEFEFE;
+    margin: auto;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    width: 80%;
+    height: auto;
+    margin-top: 95%;
+    margin-bottom: 5%;
+}
 /*destinos destacados */
 #contenedor {
     margin-bottom: 11%;
@@ -848,6 +868,14 @@ button {
         .modal-edit{   
             background-color: #FEFEFE;
             margin: auto auto auto 29.5%;
+            padding: 0.5rem;
+            border-radius: 1rem;
+            width: 30%;
+            height: auto;            
+        }
+        .modal-reminder{   
+            background-color: #FEFEFE;
+            margin: 25% auto auto 29.5%;
             padding: 0.5rem;
             border-radius: 1rem;
             width: 30%;

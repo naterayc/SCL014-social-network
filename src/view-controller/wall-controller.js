@@ -70,14 +70,17 @@ export const wallView = () => {
                         userUid: user.uid,
                         userPhoto: user.photo
                     }).then(() => {
-                        document.querySelector('#post-title').value = "";
+                        document.querySelector('#post-title').value = '';
                         getPublishPrint();
                     });
                     document.querySelector('.fa-check-circle').classList.add('hide');
                 });
-        } else {
-            console.log('input vacio');
-        }
+        }  else {            
+            document.querySelector('#reminder-modal').style.display='block';
+            document.querySelector('#close').addEventListener('click', () => {
+                document.querySelector('#reminder-modal').style.display='none';
+            });
+        } 
     });
     const btnPost = wall.querySelector('#post');
     btnPost.addEventListener('click', () => {
@@ -103,7 +106,7 @@ export const wallView = () => {
             }
         });
     });
-    // Medidas de pantalla
+    // Medidas de pantalla para responsive
     const body = document.querySelector('#body');
     const screen = window.matchMedia('(min-width: 700px)');
 
@@ -159,7 +162,7 @@ export const wallView = () => {
                     userFound.country ? userFound.country : 'Tu pais'
                 );
                 const modalProf = document.querySelector('#my-modal-profile');
-                modalProf.style.display = "block";
+                modalProf.style.display = 'block';
 
                 const modalProfileDesktop = document.querySelector('.modal-content-profile');
                 modalProfileDesktop.innerHTML = renderProfile;
@@ -167,12 +170,12 @@ export const wallView = () => {
                 renderProfileP();
 
                 document.querySelector('.close-modal').addEventListener('click', () => {
-                    modalProf.style.display = "none";
+                    modalProf.style.display = 'none';
                 });
 
                 window.addEventListener('click', (event) => {
                     if (event.target == modalProf) {
-                        modalProf.style.display = "none";
+                        modalProf.style.display = 'none';
                     }
                 });
 

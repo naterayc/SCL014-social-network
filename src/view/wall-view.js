@@ -25,6 +25,13 @@ ${ header}
         <button id="post" type="button" class="button2">Destinos destacados</button>
 </section>
 
+<div id="reminder-modal" class="modal">
+    <section class="modal-reminder">
+        <h3> Debes cargar una foto antes de publicar </h3>
+        <button id="close" class="close-btn"> Ok </button>
+    </section>
+</div>
+
 <section id= "container-post"></section>
 
 <!-- Modal de Perfil -->
