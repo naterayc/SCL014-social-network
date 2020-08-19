@@ -80,7 +80,7 @@ export const signInView = () => {
 
     });
 
-    // Mostrar modal
+    // Mostrar modal de registro
     const modal = document.querySelector('#myModal');
     const btnOpenModal = document.querySelector('#btn-open-modal-register');
     const btncloseModal = document.querySelector('.close-modal');
