@@ -42,7 +42,7 @@ export const wallView = () => {
         reader.onloadend = function () {
             photo = reader.result;
             const loadIcon = document.querySelector('.fa-check-circle');
-            setTimeout(function(){ loadIcon.classList.remove('hide'); }, 1000); 
+            setTimeout(function () { loadIcon.classList.remove('hide'); }, 1000);
         };
 
         reader.readAsDataURL(photoLoaded);
@@ -73,6 +73,7 @@ export const wallView = () => {
                         document.querySelector('#post-title').value = "";
                         getPublishPrint();
                     });
+                    document.querySelector('.fa-check-circle').classList.add('hide');
                 });
         } else {
             console.log('input vacio');
@@ -109,7 +110,7 @@ export const wallView = () => {
     const menu = document.querySelector('#show-signout');
     const signOutBar = document.querySelector('#sign-out');
     const editProfileBar = document.querySelector('#edit-profile-menu');
-    menu.addEventListener('click', () => {        
+    menu.addEventListener('click', () => {
         const showWallDesktop = () => {
             const myMediaQ = (screenSize) => {
                 if (screenSize.matches) {
@@ -119,7 +120,7 @@ export const wallView = () => {
                     signOutBar.classList.remove('hide');
                 }
             };
-            myMediaQ(screen); 
+            myMediaQ(screen);
             screen.addListener(myMediaQ);
         };
         showWallDesktop();
@@ -127,7 +128,7 @@ export const wallView = () => {
 
 
     signOutBar.addEventListener('click', () => {
-        signOut();        
+        signOut();
         const showWallDesktop = () => {
             const myMedia = (screenSize) => {
                 if (screenSize.matches) { // si el media query coincide
@@ -142,7 +143,7 @@ export const wallView = () => {
                     body.style.backgroundAttachment = 'fixed';
                 }
             };
-            myMedia(screen); 
+            myMedia(screen);
             screen.addListener(myMedia); // Agrega un listener que ejecute la funcion cuando se produzca un cambio
         };
         showWallDesktop();
@@ -156,7 +157,7 @@ export const wallView = () => {
                     users.photo ? users.photo : 'img/viaje.png',
                     userFound.user ? userFound.user : users.name,
                     userFound.country ? userFound.country : 'Tu pais'
-                );                
+                );
                 const modalProf = document.querySelector('#my-modal-profile');
                 modalProf.style.display = "block";
 
@@ -164,14 +165,14 @@ export const wallView = () => {
                 modalProfileDesktop.innerHTML = renderProfile;
 
                 renderProfileP();
-                
+
                 document.querySelector('.close-modal').addEventListener('click', () => {
                     modalProf.style.display = "none";
                 });
-                
+
                 window.addEventListener('click', (event) => {
                     if (event.target == modalProf) {
-                        modalProf.style.display = "none";               
+                        modalProf.style.display = "none";
                     }
                 });
 
