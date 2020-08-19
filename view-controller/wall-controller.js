@@ -244,7 +244,7 @@ export const wallView = () => {
                         });
                     }
                     // evento para dar like a los post
-                    parentDiv.querySelector('[data-id="likesNumber"]').addEventListener('click', () => {
+                    parentDiv.querySelector('.fa-heart').addEventListener('click', () => {
                         getDoc(parentDiv.dataset.id)
                             .then((doc) => {
                                 const user = JSON.parse(localStorage.getItem('user'));
