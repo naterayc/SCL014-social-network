@@ -235,7 +235,6 @@ export const wallView = () => {
                         });
 
                         parentDiv.querySelector('#delete').addEventListener('click', () => {
-                            console.log(parentDiv.dataset.id);
                             deletePublish(parentDiv.dataset.id)
                                 .then(() => {
                                     parentDiv.querySelector('.modal').classList.add('hide');
