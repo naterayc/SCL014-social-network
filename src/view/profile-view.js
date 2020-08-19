@@ -3,7 +3,7 @@ import { mypostPlantilla } from "./mypost-content-view.js"
 
 const profileContent = (profilePhoto, name, location) => `
 <div id="header" class="head">
-</div>
+</div> 
 <section id="info-viajero">
     <img src="${ profilePhoto }" alt="Foto perfil" class="img-profile">     
     <div id="datos-viajero">
@@ -15,11 +15,11 @@ const profileContent = (profilePhoto, name, location) => `
 
 <section id="icons-profile">
     <div id="iconos">
-        <i class="fas fa-suitcase-rolling iconos-profile"></i> <!--maleta-->
-        <i class="fas fa-bed iconos-profile"></i> <!-- cama -->
-        <i class="fas fa-taxi iconos-profile"></i> <!-- taxi -->
-        <i class="fas fa-utensils iconos-profile"></i> <!--comida-->
-        <i class="fas fa-hiking iconos-profile"></i> <!--guia-->
+        <i class="fas fa-suitcase-rolling iconos-profile"></i> 
+        <i class="fas fa-bed iconos-profile"></i> 
+        <i class="fas fa-taxi iconos-profile"></i> 
+        <i class="fas fa-utensils iconos-profile"></i> 
+        <i class="fas fa-hiking iconos-profile"></i> 
     </div>
 </section>
 

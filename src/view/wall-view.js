@@ -18,13 +18,21 @@ ${ header}
         <div id="load">
             <input type="file" id="load-photo" accept="image/*"/>
             <label for="load-photo" class="load-picture">Cargar foto <i class="far fa-image"></i></label>
-        </div>
+            <i class="fas fa-check-circle load hide"></i>
+        </div> 
     </div>
         <div id="publish"> Publicar </div>
         <button id="post" type="button" class="button2">Destinos destacados</button>
 </section>
 
 <section id= "container-post"></section>
+
+<!-- Modal de Perfil -->
+<section id="my-modal-profile" class="modal">
+    <span class="close-modal">&times;</span>
+    <section class="modal-content-profile">
+    </section> 
+</section>
 
 <section class= "container-right">
     <!-- destiny -->
