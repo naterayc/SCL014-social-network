@@ -844,6 +844,14 @@ button {
             cursor: pointer;
             color: #4F4F4F;       
         }
+        #sign-wrong-password>span{
+            font-family: 'Roboto';
+            color: #4f4f4f;
+        }
+        #sign-email-not-found>span{
+            font-family: 'Roboto';
+            color: #4f4f4f;
+        }
         h4 {
             color: #4F4F4F;
             font-family: 'Roboto', sans-serif;
