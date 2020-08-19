@@ -8,6 +8,8 @@
 * [2.2 Problemática y solución](#2.2-problemática-y-solución)
 * [2.3 Historias de usuario](#2.3-historias-de-usuario)
 * [2.4 Proceso de prototipado](#2.4-proceso-de-prototipado)
+* [3. Desarrolladoras](#3-desarrolladoras)
+* [4. Enlace](#4-enlace)
 
 ***
 
@@ -53,7 +55,7 @@ Estos a su vez, utilizan  frecuentemente redes sociales, como  Instagram y Faceb
 
 Tomando en cuenta la necesidad  de los usuarios  de compartir  sus experiencias de  viaje, surge Nómada un espacio para compartir e  interactuar con otros  que viajen frecuentemente, donde  no simplemente  se muestre una imagen bonita como reseña de algún viaje, sino que pueda ser un espacio seguro para compartir las experiencias de viaje, aún si estas sean  buenas o no tan buenas, ayudando de esta forma a otros viajeros al momento de planificar sus viajes y así fomentar las relaciones e interacciones entre los usuarios, llegando a crear una comunidad.
 
-Una Aplicacion  como Nómada supone  también una gran  oportunidad para  las compañías de viajes,  aerolíneas  y cadenas hoteleras. A  través de  los likes, intereses  e interacciones de los usuarios,  las marcas dedicadas al turismo pueden reconocer qué destinos son los que más interesan, de forma que puedan crean promociones personalizadas para cada uno de ellos.
+Una aplicación  como Nómada supone  también una gran  oportunidad para  las compañías de viajes,  aerolíneas  y cadenas hoteleras. A  través de  los likes, intereses  e interacciones de los usuarios,  las marcas dedicadas al turismo pueden reconocer qué destinos son los que más interesan, de forma que puedan crear promociones personalizadas para cada uno de ellos.
 
 ### 2.3 Historias de usuario
 
@@ -97,8 +99,13 @@ De estos se recibieron feedback en cuanto a hacer la interfaz más descriptiva p
 
   [Prototipo de alta fidelidad en Figma](https://www.figma.com/file/RpuGwihRDhkzMamqWhO0CT/N%C3%B3mada?node-id=0%3A1)
   
-## Desarrolladoras
+## 3. Desarrolladoras
 
 * [Amanda Diaz](https://github.com/adbarquitectura)
 * [Algris Marquez](https://github.com/AlgrisMarquez)
 * [Yndira Natera](https://github.com/naterayc)
+
+## 4. Enlace
+
+  Los invitamos a  probar [Nómada](https://naterayc.github.io/SCL014-social-network)
+  
