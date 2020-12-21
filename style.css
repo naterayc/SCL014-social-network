@@ -778,7 +778,7 @@ button {
     color:#4F4F4F;
 }
 /* Desktop */
-@media screen and (min-width: 700px) and (max-width: 1600px) {
+@media screen and (min-width: 700px) and (max-width: 1024px) {
         .body {
             background-image: url("./img/backimg.jpg");
             background-attachment: fixed;
@@ -941,8 +941,8 @@ button {
         }
         #container-post {
             width: 40%;
-            margin: 7% auto 1% 25%;
-            max-height: 580px;
+            margin: 12% auto 1% 25%;
+            max-height: 77vh;
             display: inline-grid;
             scroll-snap-align: end;    
             scroll-padding-top: 5%;
@@ -968,7 +968,7 @@ button {
         width: 100%;
         background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
         transform: rotate(180deg);
-    }    
+        }    
         #barra span>i {
             display: none;
         }
@@ -995,7 +995,7 @@ button {
         #destinos{
             display: inline-block;
             flex-direction: column;
-            height: 490px;
+            height: 72vh;
             overflow-y: scroll;
             scroll-padding-top: 10%;
             scroll-snap-align: start;
@@ -1077,10 +1077,14 @@ button {
             top: 0;
             width: 100%;
             height: 100%;
-            overflow-y: scroll;
-            background-color: rgb(255, 255, 255);
+            /* overflow-y: scroll; */
             background-color: rgba(0, 0, 0, 0.52);
             transition: opacity .15s linear;
+            overflow: auto;
+            overflow-y: overlay;           
+        }
+        .modal-content-profile::-webkit-scrollbar {
+            -webkit-appearance: none;
         }
         .modal-content-profile {
             background-color: #fefefe;
@@ -1108,6 +1112,688 @@ button {
         }
         .signout>span:hover {           
             color: #2979FF;
+        }
+        .copyright {
+            margin-top: 1%;
         }        
         
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .body {
+        background-image: url("./img/backimg.jpg");
+        background-attachment: fixed;
+        margin: 0;        
+        background-size: cover;
+        overflow-y: hidden;
+    }   
+    #login{
+        background: rgba(255, 255, 255, 0.45);
+        height: auto;
+        margin: auto auto auto 60%;
+        margin: 0 auto 0 60%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        padding: 2rem;
+    }
+    .logo-inicio {
+        width: 50%;
+        height: auto;
+        margin: 30% auto auto auto;
+    }
+    /*se agregar clase*/
+    .login-container{
+        background-color: #ffff;
+        border-radius: 1rem;
+        border-style: none;
+        line-height: 0.1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        height: auto;
+        margin: 6rem 3rem 3rem 3rem;        
+    }
+    input {
+        width: 60%;
+        display: block;
+        margin: 1rem auto auto auto;
+        padding: 1rem 1rem 0 1rem;
+        border-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.62);
+        background-color: transparent;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: #2979FF;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    #dataregistro>input::placeholder {
+        color: #2979FF;
+    }
+    .buttonWhite {
+        width: 234px;
+        height: 35px;
+        background: #2979FF;
+        border-radius: 10px;
+        border: transparent;
+        color: #FFFFFF;
+        font-size: 1rem;
+        display: block;
+        margin: 2rem auto auto auto;
+        font-weight: 500;
+    }
+    .buttonWhite:hover {
+        cursor: pointer;
+        color: #4F4F4F;       
+    }
+    #sign-wrong-password>span{
+        font-family: 'Roboto';
+        color: #4f4f4f;
+    }
+    #sign-email-not-found>span{
+        font-family: 'Roboto';
+        color: #4f4f4f;
+    }
+    h4 {
+        color: #4F4F4F;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 1rem 0 1rem .2rem;
+    }
+    h4:hover {
+        color: #2979FF;        
+    }
+    .modal {
+        overflow: hidden;
+    }
+    .modal-content {
+        background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;
+        margin: 6% 5% 4% 65%;    
+    }
+    .modal-edit{   
+        background-color: #FEFEFE;
+        margin: auto auto auto 29.5%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;            
+    }
+    .modal-reminder{   
+        background-color: #FEFEFE;
+        margin: 25% auto auto 29.5%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;            
+    }
+    fieldset {
+        background-color: #EDEDED;
+        border-radius: 1rem;
+        border-style: none;
+        line-height: 0.1rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        height: auto;
+    }
+    fieldset input {
+        width: 90%;
+    }
+    /* The Close Button */
+    .close-modal {
+        color: #AAAAAA;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .logo {            
+        margin: auto auto auto 0; 
+        width: 11%;
+        height: auto;
+    }
+    .close-modal:hover,
+    .close-modal:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .imgRedonda {
+        border: solid #ffff 3px;
+    }
+    button {
+        font-size: 1rem;  
+    }
+    button:hover {               
+        cursor: pointer;
+        color: #4F4F4F;     
+    }
+    #wall {
+        width: 38%;
+        margin: 0% auto auto auto;
+        position: fixed;
+        left: 25%;
+    }
+    .public {       
+        width: 90%;
+        padding: .2rem;
+        margin: 0.2rem auto .2rem auto; 
+    }
+    #container-post {
+        width: 40%;
+        margin: 9% auto 1% 25%;
+        max-height: 77vh;
+        display: inline-grid;
+        scroll-snap-align: end;    
+        scroll-padding-top: 5%;
+        padding: 0;
+    }
+    #post-note{
+        border-radius: 7px;            
+    }
+    #post-note div {        
+        padding: .3rem 0rem 0rem 0rem; 
+    }
+   
+    .container-right {
+        display: inline-grid;
+        max-width: 25%;
+        margin: 1% auto 1% auto;
+        position: fixed;
+        right: 5%           
+    }
+    /* barra inferior*/
+    #barra {
+    display: none;
+    width: 100%;
+    background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+    transform: rotate(180deg);
+    }    
+    #barra span>i {
+        display: none;
+    }
+    .head {            
+        top: 0;
+        padding: 0.5rem;
+    }
+    .signout {
+        align-items: flex-end;
+        width: 12%;
+        margin-left: auto;
+        padding: .2rem;
+    }
+    .button2 {       
+        margin: 0 auto auto auto;
+        display: none;      
+    }
+    .profile-picture {
+    display: none;
+    }
+    .fa-chevron-left:before {
+        display: none;
+    }
+    #destinos{
+        display: inline-block;
+        flex-direction: column;
+        height: 72vh;
+        overflow-y: scroll;
+        scroll-padding-top: 10%;
+        scroll-snap-align: start;
+    }
+    #destinos::-webkit-scrollbar {
+        width: 8px;     
+        height: 8px;   
+        display: none; 
+    }                
+    #destiny-img:hover {
+        transform: scale(1.1,1.1);
+    }
+    #info-viajero{
+        display: block;
+    }
+    .img-cuadrada{            
+        border-radius: 7px;
+        width: 90%;
+        max-height: 360px;
+        object-fit: cover;
+    }
+    .user-name {            
+        font-size: 1.2rem;           
+        margin: .8rem auto auto auto;
+        text-align: center;
+    }
+    .img-profile {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+        margin-right: 40%;
+        margin: auto;
+        display: block;
+    }
+    #box {
+        width: 80%;
+        height: auto;
+        box-sizing: border-box;
+        margin: auto auto .7rem auto;
+        text-align: center;
+    }
+    #destiny-img {
+        justify-self: center;
+        width: 95%;
+        height: 8rem;
+        margin: auto auto auto .5rem;
+        object-fit: cover;
+    }
+    .user-info {
+        font-family: 'roboto';
+        font-size: .9rem;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+     #iconos{
+        text-align: center;
+        margin: auto auto auto auto;
+    }
+    #datos-viajero {
+        height: auto;
+        display: grid;
+        line-height: 1.5rem;
+        margin: 1% auto 1% auto;
+    }
+    h2 {
+        text-align: center;
+        margin: 0.8rem 0 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    .edit-input{            
+        min-width: 350px;
+        
+    }
+    #my-modal-profile {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.52);
+        transition: opacity .15s linear;
+    }
+    .modal-content-profile {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 40%;
+        height: auto;
+        margin: 1% auto 5% 25%;
+        overflow: auto;
+        overflow-y: overlay;           
+    }
+    .modal-content-profile::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    #mypost-note {            
+        width: 40%;                  
+                   
+    }
+    #boxmypost {
+        box-sizing: border-box;
+        justify-content: flex-start; 
+        padding-left: 3rem;
+    }
+    #mostrar-amigos {
+        justify-content: center;
+    }
+    #boxdeinteres {
+        justify-content: center;
+    }
+    .signout>span:hover {           
+        color: #2979FF;
+    } 
+    .copyright {
+        margin-top: 1%;
+    }  
+}
+@media screen and (min-width: 1441px) {
+    .body {
+        background-image: url("./img/backimg.jpg");
+        background-attachment: fixed;
+        margin: 0;        
+        background-size: cover;
+        overflow-y: hidden;
+    }   
+    #login{
+        background: rgba(255, 255, 255, 0.45);
+        height: auto;
+        margin: auto auto auto 60%;
+        margin: 0 auto 0 60%;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        padding: 2rem;
+    }
+    .logo-inicio {
+        width: 50%;
+        height: auto;
+        margin: 30% auto auto auto;
+    }
+    /*se agregar clase*/
+    .login-container{
+        background-color: #ffff;
+        border-radius: 1rem;
+        border-style: none;
+        line-height: 0.1rem;
+        padding: 1rem 1rem 1rem 1rem;
+        height: auto;
+        margin: 6rem 3rem 3rem 3rem;        
+    }
+    input {
+        width: 60%;
+        display: block;
+        margin: 1rem auto auto auto;
+        padding: 1rem 1rem 0 1rem;
+        border-style: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.62);
+        background-color: transparent;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        color: #2979FF;
+        font-size: 1rem;
+        font-weight: 300;
+    }
+    #dataregistro>input::placeholder {
+        color: #2979FF;
+    }
+    .buttonWhite {
+        width: 234px;
+        height: 35px;
+        background: #2979FF;
+        border-radius: 10px;
+        border: transparent;
+        color: #FFFFFF;
+        font-size: 1rem;
+        display: block;
+        margin: 2rem auto auto auto;
+        font-weight: 500;
+    }
+    .buttonWhite:hover {
+        cursor: pointer;
+        color: #4F4F4F;       
+    }
+    #sign-wrong-password>span{
+        font-family: 'Roboto';
+        color: #4f4f4f;
+    }
+    #sign-email-not-found>span{
+        font-family: 'Roboto';
+        color: #4f4f4f;
+    }
+    h4 {
+        color: #4F4F4F;
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 1rem 0 1rem .2rem;
+    }
+    h4:hover {
+        color: #2979FF;        
+    }
+    .modal {
+        overflow: hidden;
+    }
+    .modal-content {
+        background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;
+        margin: 6% 5% 4% 65%;    
+    }
+    .modal-edit{   
+        background-color: #FEFEFE;
+        margin: auto auto auto 29.5%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;            
+    }
+    .modal-reminder{   
+        background-color: #FEFEFE;
+        margin: 25% auto auto 29.5%;
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 30%;
+        height: auto;            
+    }
+    fieldset {
+        background-color: #EDEDED;
+        border-radius: 1rem;
+        border-style: none;
+        line-height: 0.1rem;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        height: auto;
+    }
+    fieldset input {
+        width: 90%;
+    }
+    /* The Close Button */
+    .close-modal {
+        color: #AAAAAA;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+    .logo {            
+        margin: auto auto auto 0; 
+        width: 11%;
+        height: auto;
+    }
+    .close-modal:hover,
+    .close-modal:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .imgRedonda {
+        border: solid #ffff 3px;
+    }
+    button {
+        font-size: 1rem;  
+    }
+    button:hover {               
+        cursor: pointer;
+        color: #4F4F4F;     
+    }
+    #wall {
+        width: 38%;
+        margin: 0% auto auto auto;
+        position: fixed;
+        left: 25%;
+    }
+    .public {       
+        width: 90%;
+        padding: .2rem;
+        margin: 0.2rem auto .2rem auto; 
+    }
+    #container-post {
+        max-width: 35%;
+        margin: 9% auto 1% 27%;
+        max-height: 75vh;
+        display: inline-grid;
+        scroll-snap-align: end;    
+        scroll-padding-top: 5%;
+        padding: 0;
+    }
+    #publish{
+        text-align: center;
+    }
+    #post-note{
+        border-radius: 7px;            
+    }
+    #post-note div {        
+        padding: .3rem 0rem 0rem 0rem; 
+    }
+   
+    .container-right {
+        display: inline-grid;
+        max-width: 25%;
+        margin: 1% auto 1% auto;
+        position: fixed;
+        right: 5%           
+    }
+    /* barra inferior*/
+    #barra {
+    display: none;
+    width: 100%;
+    background: linear-gradient(180deg, #C5E0EF 0%, #C5E0EF 0.01%, #D9EAF4 39.06%, rgba(227, 240, 247, 0.6) 70.83%, rgba(255, 255, 255, 0.24) 100%, rgba(255, 255, 255, 0.2) 100%), #FFFFFF;
+    transform: rotate(180deg);
+}    
+    #barra span>i {
+        display: none;
+    }
+    .head {            
+        top: 0;
+        padding: 0.5rem;
+    }
+    .signout {
+        align-items: flex-end;
+        width: 12%;
+        margin-left: auto;
+        padding: .2rem;
+    }
+    .button2 {       
+        margin: 0 auto auto auto;
+        display: none;      
+    }
+    .profile-picture {
+    display: none;
+    }
+    .fa-chevron-left:before {
+        display: none;
+    }
+    #destinos{
+        display: inline-block;
+        flex-direction: column;
+        height: 75vh;
+        overflow-y: scroll;
+        scroll-padding-top: 10%;
+        scroll-snap-align: start;
+    }
+    #destinos::-webkit-scrollbar {
+        width: 8px;     
+        height: 8px;   
+        display: none; 
+    }                
+    #destiny-img:hover {
+        transform: scale(1.1,1.1);
+    }
+    #info-viajero{
+        display: block;
+    }
+    .img-cuadrada{            
+        border-radius: 7px;
+        width: 90%;
+        max-height: 360px;
+        object-fit: cover;
+    }
+    .user-name {            
+        font-size: 1.2rem;           
+        margin: .8rem auto auto auto;
+        text-align: center;
+    }
+    .img-profile {
+        width: 9rem;
+        height: 9rem;
+        border-radius: 50%;
+        margin-right: 40%;
+        margin: auto;
+        display: block;
+    }
+    #box {
+        width: 80%;
+        height: auto;
+        box-sizing: border-box;
+        margin: auto auto .7rem auto;
+        text-align: center;
+    }
+    #destiny-img {
+        justify-self: center;
+        width: 95%;
+        height: 8rem;
+        margin: auto auto auto .5rem;
+        object-fit: cover;
+    }
+    .user-info {
+        font-family: 'roboto';
+        font-size: .9rem;
+        margin: 0 auto 0 auto;
+        text-align: center;
+    }
+     #iconos{
+        text-align: center;
+        margin: auto auto auto auto;
+    }
+    #datos-viajero {
+        height: auto;
+        display: grid;
+        line-height: 1.5rem;
+        margin: 1% auto 1% auto;
+    }
+    h2 {
+        text-align: center;
+        margin: 0.8rem 0 0.8rem 1rem;
+        font-size: 1rem;
+    }
+    .edit-input{            
+        min-width: 350px;
+        
+    }
+    #my-modal-profile {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.52);
+        transition: opacity .15s linear;
+    }
+    .modal-content-profile {
+        background-color: rgb(254, 254, 254);
+        padding: 0.5rem;
+        border-radius: 1rem;
+        width: 40%;
+        max-height: 85vh;
+        margin: 3% auto 5% 30%;
+        overflow: auto;
+        overflow-y: overlay;           
+    }
+    .modal-content-profile::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    #mypost-note {            
+        width: 40%;                  
+                   
+    }
+    #boxmypost {
+        box-sizing: border-box;
+        justify-content: flex-start; 
+        padding-left: 3rem;
+    }
+    #mostrar-amigos {
+        justify-content: center;
+    }
+    #boxdeinteres {
+        justify-content: center;
+    }
+    .signout>span:hover {           
+        color: #2979FF;
+    }  
+    .copyright {
+        margin-top: 1%;
+    }  
 }
